@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "shop": "Sản phẩm",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "cart": "Giỏ hàng"
+  },
+  "hero": {
+    "title": "Vẻ đẹp thuần khiết từ thiên nhiên Việt Nam",
+    "subtitle": "Mỹ phẩm thuần chay 100%, được làm từ những nguyên liệu thiên nhiên Việt Nam dịu nhẹ, an toàn và hiệu quả.",
+    "cta": "Mua ngay"
+  },
+  "products": {
+    "title": "Sản phẩm nổi bật",
+    "subtitle": "Khám phá các sản phẩm làm đẹp tự nhiên bán chạy nhất của chúng tôi",
+    "addToCart": "Thêm vào giỏ",
+    "list": {
+      "p1": {
+        "name": "Nước tẩy trang sen Hậu Giang 1000ml",
+        "desc": "Nước tẩy trang dịu nhẹ, làm sạch lớp trang điểm và bụi bẩn."
+      },
+      "p2": {
+        "name": "Tẩy da chết cà phê Đắk Lắk",
+        "desc": "Tẩy tế bào chết cà phê tự nhiên, làm mịn và sáng da."
+      },
+      "p3": {
+        "name": "Son dưỡng môi mật ong Cao Bằng",
+        "desc": "Son dưỡng môi với mật ong rừng nguyên chất."
+      },
+      "p4": {
+        "name": "Sữa dưỡng thể dừa Bến Tre",
+        "desc": "Sữa dưỡng thể dưỡng ẩm sâu với dầu dừa ép lạnh."
+      },
+      "p5": {
+        "name": "Tinh dầu bưởi hồng Tiền Giang",
+        "desc": "Giúp tóc chắc khỏe và giảm rụng tóc."
+      },
+      "p6": {
+        "name": "Mặt nạ ngủ rau má Sa Pa",
+        "desc": "Mặt nạ ngủ làm dịu cho làn da nhạy cảm."
+      }
+    }
+  },
+  "checkout": {
+    "contactTitle": "Thông tin liên hệ của bạn",
+    "haveAccount": "Bạn đã có tài khoản?",
+    "signIn": "Đăng nhập",
+    "emailPlaceholder": "Nhập địa chỉ email",
+    "subscribe": "Đăng ký nhận các thông tin khuyến mãi đầu tiên từ Cocoon",
+    "shippingTitle": "Địa chỉ giao hàng",
+    "fullName": "Họ và tên",
+    "phone": "Nhập số điện thoại",
+    "province": "Chọn Tỉnh/Thành Phố",
+    "district": "Chọn Quận/Huyện",
+    "ward": "Chọn Phường/Xã",
+    "address": "Số nhà, đường, khu vực",
+    "saveInfo": "Lưu thông tin cho lần thanh toán tiếp theo",
+    "shippingMethodTitle": "Phương thức vận chuyển",
+    "standardShipping": "Giao hàng tiêu chuẩn (2-3 ngày)",
+    "expressShipping": "Giao hàng nhanh (trong 24h)",
+    "free": "Miễn phí",
+    "paymentMethodTitle": "Phương thức thanh toán",
+    "cod": "Thanh toán khi nhận hàng (COD)",
+    "bank": "Chuyển khoản ngân hàng",
+    "orderDetails": "Chi tiết đơn hàng",
+    "promoLabel": "Nhập mã khuyến mãi hoặc thẻ quà tặng",
+    "apply": "Áp dụng",
+    "subtotal": "Tạm tính",
+    "discount": "Giảm giá",
+    "shippingFee": "Phí vận chuyển",
+    "total": "Tổng cộng",
+    "stockLeft": "Chỉ còn {{count}} sản phẩm",
+    "placeOrder": "Đặt hàng",
+    "agreement": "* Khi nhấn nút Đặt hàng nghĩa là bạn đã đọc và đồng ý với các điều khoản, chính sách bán hàng và bảo mật của chúng tôi tại Website.",
+    "emptyCart": "Giỏ hàng của bạn đang trống.",
+    "backToShop": "Quay lại cửa hàng"
+  },
+  "footer": {
+    "copyright": "© 2025 The Cocoon Original Vietnam. Bảo lưu mọi quyền."
+  }
+}
