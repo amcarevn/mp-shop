@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { FaBuildingColumns, FaMoneyBillWave, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext.jsx'
 import { formatVND } from '../data/products.js'
+import { defaultProductIcon, productIconMap } from '../data/productIcons.jsx'
 
 export default function Checkout() {
   const { t } = useTranslation()
@@ -153,7 +155,7 @@ export default function Checkout() {
                 checked={payment === 'cod'}
                 onChange={() => setPayment('cod')}
               />
-              <span>💵 {t('checkout.cod')}</span>
+              <span><FaMoneyBillWave className="inline-icon" />{t('checkout.cod')}</span>
             </label>
             <label className={`payment-method ${payment === 'bank' ? 'active' : ''}`}>
               <input
@@ -163,7 +165,7 @@ export default function Checkout() {
                 checked={payment === 'bank'}
                 onChange={() => setPayment('bank')}
               />
-              <span>🏦 {t('checkout.bank')}</span>
+              <span><FaBuildingColumns className="inline-icon" />{t('checkout.bank')}</span>
             </label>
           </section>
 
@@ -188,45 +190,48 @@ export default function Checkout() {
               </div>
             ) : (
               <>
-                {items.map((it) => (
-                  <div className="order-item" key={it.id}>
-                    <div className="order-item-image" aria-hidden="true">
-                      {it.emoji}
-                    </div>
-                    <div className="order-item-info">
-                      <p className="order-item-name">{it.name}</p>
-                      <div className="qty">
-                        <button
-                          type="button"
-                          aria-label="decrease"
-                          onClick={() => updateQty(it.id, it.qty - 1)}
-                        >−</button>
-                        <span>{it.qty}</span>
-                        <button
-                          type="button"
-                          aria-label="increase"
-                          onClick={() => updateQty(it.id, it.qty + 1)}
-                        >+</button>
+                {items.map((it) => {
+                  const ItemIcon = productIconMap[it.icon] || defaultProductIcon
+                  return (
+                    <div className="order-item" key={it.id}>
+                      <div className="order-item-image" aria-hidden="true">
+                        <ItemIcon className="order-item-icon" />
                       </div>
-                      {typeof it.stock === 'number' && it.stock - it.qty < 5 && (
-                        <p className="order-item-stock">
-                          {t('checkout.stockLeft', { count: Math.max(0, it.stock - it.qty) })}
-                        </p>
-                      )}
+                      <div className="order-item-info">
+                        <p className="order-item-name">{it.name}</p>
+                        <div className="qty">
+                          <button
+                            type="button"
+                            aria-label="decrease"
+                            onClick={() => updateQty(it.id, it.qty - 1)}
+                          >−</button>
+                          <span>{it.qty}</span>
+                          <button
+                            type="button"
+                            aria-label="increase"
+                            onClick={() => updateQty(it.id, it.qty + 1)}
+                          >+</button>
+                        </div>
+                        {typeof it.stock === 'number' && it.stock - it.qty < 5 && (
+                          <p className="order-item-stock">
+                            {t('checkout.stockLeft', { count: Math.max(0, it.stock - it.qty) })}
+                          </p>
+                        )}
+                      </div>
+                      <span className="order-item-price">
+                        {formatVND(it.price * it.qty)}
+                      </span>
+                      <button
+                        type="button"
+                        className="order-item-remove"
+                        aria-label="remove"
+                        onClick={() => removeItem(it.id)}
+                      >
+                        <FaXmark />
+                      </button>
                     </div>
-                    <span className="order-item-price">
-                      {formatVND(it.price * it.qty)}
-                    </span>
-                    <button
-                      type="button"
-                      className="order-item-remove"
-                      aria-label="remove"
-                      onClick={() => removeItem(it.id)}
-                    >
-                      ✕
-                    </button>
-                  </div>
-                ))}
+                  )
+                })}
 
                 <p className="promo-label">{t('checkout.promoLabel')}</p>
                 <div className="promo">

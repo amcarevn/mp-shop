@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
+import { FaLeaf, FaLocationDot, FaShieldHalved, FaSparkles } from 'react-icons/fa6'
 import { products, formatVND } from '../data/products.js'
+import { defaultProductIcon, productIconMap } from '../data/productIcons.jsx'
 import { useCart } from '../context/CartContext.jsx'
 
 const brandFeatures = [
-  { icon: '🌿', key: 'feature1' },
-  { icon: '🇻🇳', key: 'feature2' },
-  { icon: '🛡️', key: 'feature3' },
-  { icon: '✨', key: 'feature4' },
+  { Icon: FaLeaf, key: 'feature1' },
+  { Icon: FaLocationDot, key: 'feature2' },
+  { Icon: FaShieldHalved, key: 'feature3' },
+  { Icon: FaSparkles, key: 'feature4' },
 ]
 
 const featuredProduct = products[0]
@@ -22,7 +24,7 @@ export default function Home() {
       id: p.id,
       name: t(`products.list.${p.id}.name`),
       price: p.price,
-      emoji: p.emoji,
+      icon: p.icon,
       stock: p.stock,
     })
   }
@@ -48,9 +50,9 @@ export default function Home() {
       <section className="brand-features">
         <div className="container">
           <div className="brand-features-grid">
-            {brandFeatures.map(({ icon, key }) => (
+            {brandFeatures.map(({ Icon, key }) => (
               <div key={key} className="brand-feature-item">
-                <span className="brand-feature-icon">{icon}</span>
+                <Icon className="brand-feature-icon" aria-hidden="true" />
                 <div>
                   <strong>{t(`brand.${key}Title`)}</strong>
                   <p>{t(`brand.${key}Desc`)}</p>
@@ -98,31 +100,30 @@ export default function Home() {
           <p className="section-sub">{t('products.subtitle')}</p>
 
           <div className="product-grid">
-            {products.map((p) => (
-              <article key={p.id} className="product-card">
-                <div className="product-image" aria-hidden="true">
-                  {p.emoji}
-                </div>
-                <h3 className="product-name">
-                  {t(`products.list.${p.id}.name`)}
-                </h3>
-                <p className="product-desc">
-                  {t(`products.list.${p.id}.desc`)}
-                </p>
-                <div className="product-bottom">
-                  <span className="product-price">{formatVND(p.price)}</span>
-                  <button
-                    className="btn-add"
-                    onClick={() => {
-                      handleAdd(p)
-                      navigate('/checkout')
-                    }}
-                  >
-                    {t('products.addToCart')}
-                  </button>
-                </div>
-              </article>
-            ))}
+            {products.map((p) => {
+              const ProductIcon = productIconMap[p.icon] || defaultProductIcon
+              return (
+                <article key={p.id} className="product-card">
+                  <div className="product-image" aria-hidden="true">
+                    <ProductIcon className="product-icon" />
+                  </div>
+                  <h3 className="product-name">{t(`products.list.${p.id}.name`)}</h3>
+                  <p className="product-desc">{t(`products.list.${p.id}.desc`)}</p>
+                  <div className="product-bottom">
+                    <span className="product-price">{formatVND(p.price)}</span>
+                    <button
+                      className="btn-add"
+                      onClick={() => {
+                        handleAdd(p)
+                        navigate('/checkout')
+                      }}
+                    >
+                      {t('products.addToCart')}
+                    </button>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>
