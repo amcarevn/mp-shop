@@ -1,10 +1,10 @@
 import {
   FaBottleDroplet,
   FaBoxOpen,
+  FaDroplet,
   FaLeaf,
   FaLemon,
   FaMugHot,
-  FaSeedling,
   FaSprayCanSparkles,
 } from 'react-icons/fa6'
 
@@ -12,7 +12,7 @@ export const productIconMap = {
   bottle: FaBottleDroplet,
   coffee: FaMugHot,
   beauty: FaSprayCanSparkles,
-  seedling: FaSeedling,
+  seedling: FaDroplet,
   citrus: FaLemon,
   leaf: FaLeaf,
 }
@@ -23,7 +23,7 @@ const legacyEmojiIconMap = {
   '🧴': FaBottleDroplet,
   '☕': FaMugHot,
   '💄': FaSprayCanSparkles,
-  '🥥': FaSeedling,
+  '🥥': FaDroplet,
   '🍊': FaLemon,
   '🌿': FaLeaf,
 }
