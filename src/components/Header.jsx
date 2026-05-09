@@ -1,18 +1,28 @@
-import { NavLink, Link } from 'react-router-dom'
+import { useState } from 'react'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { FaCartShopping } from 'react-icons/fa6'
+import { FaCartShopping, FaBars, FaXmark } from 'react-icons/fa6'
 import { useCart } from '../context/CartContext.jsx'
 
 export default function Header() {
   const { t, i18n } = useTranslation()
   const { count } = useCart()
+  const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const changeLang = (lng) => i18n.changeLanguage(lng)
+
+  const closeMenu = () => setMenuOpen(false)
+
+  const handleMobileCartClick = () => {
+    closeMenu()
+    navigate('/checkout')
+  }
 
   return (
     <header className="header">
       <div className="container header-inner">
-        <Link to="/" className="logo" aria-label="ORIA">
+        <Link to="/" className="logo" aria-label="ORIA" onClick={closeMenu}>
           <span className="logo-name">ORIA</span>
           <span className="logo-sub">SAFE SOLUTIONS FOR TROPICAL SKIN</span>
         </Link>
@@ -49,7 +59,75 @@ export default function Header() {
             {count > 0 && <span className="cart-count">{count}</span>}
           </Link>
         </div>
+
+        {/* Mobile controls */}
+        <div className="mobile-controls">
+          <Link to="/checkout" className="mobile-cart-btn" aria-label={t('nav.cart')}>
+            <FaCartShopping />
+            {count > 0 && <span className="cart-count">{count}</span>}
+          </Link>
+          <button
+            type="button"
+            className="hamburger"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            {menuOpen ? <FaXmark /> : <FaBars />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile nav overlay */}
+      {menuOpen && (
+        <div className="mobile-nav-overlay" onClick={closeMenu}>
+          <nav className="mobile-nav" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-nav-header">
+              <span className="logo logo-name">ORIA</span>
+              <button
+                type="button"
+                className="hamburger"
+                aria-label="Close menu"
+                onClick={closeMenu}
+              >
+                <FaXmark />
+              </button>
+            </div>
+
+            <div className="mobile-nav-links">
+              <NavLink to="/" end onClick={closeMenu}>{t('nav.home')}</NavLink>
+              <a href="#products" onClick={closeMenu}>{t('nav.shop')}</a>
+              <a href="#about" onClick={closeMenu}>{t('nav.about')}</a>
+              <a href="#contact" onClick={closeMenu}>{t('nav.contact')}</a>
+            </div>
+
+            <div className="mobile-nav-footer">
+              <div className="lang-switch" role="group" aria-label="Language">
+                <button
+                  type="button"
+                  className={i18n.resolvedLanguage === 'vi' ? 'active' : ''}
+                  onClick={() => changeLang('vi')}
+                >
+                  VI
+                </button>
+                <span>|</span>
+                <button
+                  type="button"
+                  className={i18n.resolvedLanguage === 'en' ? 'active' : ''}
+                  onClick={() => changeLang('en')}
+                >
+                  EN
+                </button>
+              </div>
+              <button type="button" className="btn-primary" onClick={handleMobileCartClick}>
+                <FaCartShopping className="inline-icon" />
+                {t('nav.cart')}
+                {count > 0 && <span className="cart-count">{count}</span>}
+              </button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
