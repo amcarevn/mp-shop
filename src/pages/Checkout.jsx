@@ -155,7 +155,7 @@ export default function Checkout() {
                 checked={payment === 'cod'}
                 onChange={() => setPayment('cod')}
               />
-              <span><FaMoneyBillWave className="inline-icon" />{t('checkout.cod')}</span>
+              <span><FaMoneyBillWave className="inline-icon" /> {t('checkout.cod')}</span>
             </label>
             <label className={`payment-method ${payment === 'bank' ? 'active' : ''}`}>
               <input
@@ -165,7 +165,7 @@ export default function Checkout() {
                 checked={payment === 'bank'}
                 onChange={() => setPayment('bank')}
               />
-              <span><FaBuildingColumns className="inline-icon" />{t('checkout.bank')}</span>
+              <span><FaBuildingColumns className="inline-icon" /> {t('checkout.bank')}</span>
             </label>
           </section>
 
