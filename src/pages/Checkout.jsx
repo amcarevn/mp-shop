@@ -30,7 +30,7 @@ export default function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(t('checkout.placeOrder') + ' ✓')
+    alert(t('checkout.placeOrder'))
   }
 
   return (

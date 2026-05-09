@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
-import { FaLeaf, FaLocationDot, FaShieldHalved, FaSparkles } from 'react-icons/fa6'
+import { FaLeaf, FaLocationDot, FaShieldHalved, FaWandMagicSparkles } from 'react-icons/fa6'
 import { products, formatVND } from '../data/products.js'
 import { defaultProductIcon, productIconMap } from '../data/productIcons.jsx'
 import { useCart } from '../context/CartContext.jsx'
@@ -9,7 +9,7 @@ const brandFeatures = [
   { Icon: FaLeaf, key: 'feature1' },
   { Icon: FaLocationDot, key: 'feature2' },
   { Icon: FaShieldHalved, key: 'feature3' },
-  { Icon: FaSparkles, key: 'feature4' },
+  { Icon: FaWandMagicSparkles, key: 'feature4' },
 ]
 
 const featuredProduct = products[0]
