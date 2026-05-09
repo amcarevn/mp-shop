@@ -25,9 +25,7 @@ const parsedExchangeRate = Number(import.meta.env.VITE_VND_TO_USD_RATE)
 const VND_TO_USD_EXCHANGE_RATE =
   Number.isFinite(parsedExchangeRate) && parsedExchangeRate > 0
     ? parsedExchangeRate
-    : Number.isFinite(DEFAULT_VND_TO_USD_EXCHANGE_RATE) && DEFAULT_VND_TO_USD_EXCHANGE_RATE > 0
-      ? DEFAULT_VND_TO_USD_EXCHANGE_RATE
-      : 1
+    : DEFAULT_VND_TO_USD_EXCHANGE_RATE
 
 export const formatPrice = (n, language = 'vi') => {
   const normalizedLanguage = String(language || 'vi').toLowerCase()
