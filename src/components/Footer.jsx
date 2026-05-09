@@ -8,9 +8,8 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-col">
           <div className="footer-logo">
-            <span className="logo-the">the</span>
-            <span className="logo-name">COCOON</span>
-            <span className="logo-sub">ORIGINAL VIETNAM</span>
+            <span className="logo-name">ORIA</span>
+            <span className="logo-sub">SAFE SOLUTIONS FOR TROPICAL SKIN</span>
           </div>
           <p className="footer-tagline">{t('footer.col1Text')}</p>
         </div>

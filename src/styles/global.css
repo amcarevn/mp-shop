@@ -308,6 +308,18 @@ button { font-family: inherit; cursor: pointer; }
 }
 .highlight-img:hover { transform: scale(1.03); }
 
+.highlight-icon-placeholder {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-icon {
+  font-size: 8rem;
+}
+
 .highlight-badge {
   display: inline-block;
   background: var(--color-gold);

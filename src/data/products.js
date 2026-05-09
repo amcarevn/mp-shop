@@ -1,11 +1,23 @@
 // Product data — keys map to translations under products.list.*
 export const products = [
-  { id: 'p1', icon: 'bottle', price: 565000, stock: 8 },
-  { id: 'p2', icon: 'coffee', price: 185000, stock: 25 },
-  { id: 'p3', icon: 'beauty', price: 145000, stock: 50 },
-  { id: 'p4', icon: 'seedling', price: 215000, stock: 18 },
-  { id: 'p5', icon: 'citrus', price: 235000, stock: 12 },
-  { id: 'p6', icon: 'leaf', price: 295000, stock: 7 },
+  // SPOT-FADE Collection (dark spots / brightening)
+  { id: 'sf1', icon: 'bottle',   price: 490000, stock: 20 },
+  { id: 'sf2', icon: 'seedling', price: 590000, stock: 15 },
+  { id: 'sf3', icon: 'beauty',   price: 890000, stock: 12 },
+  { id: 'sf4', icon: 'leaf',     price: 690000, stock: 18 },
+  { id: 'sf5', icon: 'citrus',   price: 490000, stock: 25 },
+  // ACNE-PURE Collection (acne / oily skin)
+  { id: 'ap1', icon: 'bottle',   price: 420000, stock: 20 },
+  { id: 'ap2', icon: 'seedling', price: 490000, stock: 15 },
+  { id: 'ap3', icon: 'beauty',   price: 750000, stock: 12 },
+  { id: 'ap4', icon: 'leaf',     price: 560000, stock: 18 },
+  { id: 'ap5', icon: 'bottle',   price: 380000, stock: 30 },
+  // LUMI-GLOW Collection (brightening / radiance)
+  { id: 'lg1', icon: 'bottle',   price: 490000, stock: 20 },
+  { id: 'lg2', icon: 'seedling', price: 590000, stock: 15 },
+  { id: 'lg3', icon: 'beauty',   price: 990000, stock: 10 },
+  { id: 'lg4', icon: 'leaf',     price: 890000, stock: 12 },
+  { id: 'lg5', icon: 'citrus',   price: 490000, stock: 25 },
 ]
 
 export const formatVND = (n) =>

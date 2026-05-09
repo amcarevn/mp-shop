@@ -7,38 +7,74 @@
     "cart": "Giỏ hàng"
   },
   "hero": {
-    "title": "Vẻ đẹp thuần khiết từ thiên nhiên Việt Nam",
-    "subtitle": "Mỹ phẩm thuần chay 100%, được làm từ những nguyên liệu thiên nhiên Việt Nam dịu nhẹ, an toàn và hiệu quả.",
+    "title": "Giải Pháp An Toàn Cho Làn Da Nhiệt Đới",
+    "subtitle": "Mỹ phẩm được nghiên cứu khoa học, thiết kế cho khí hậu nóng ẩm — hiệu quả, minh bạch và phù hợp sử dụng lâu dài.",
     "cta": "Mua ngay"
   },
   "products": {
-    "title": "Sản phẩm nổi bật",
-    "subtitle": "Khám phá các sản phẩm làm đẹp tự nhiên bán chạy nhất của chúng tôi",
+    "title": "Sản Phẩm Của Chúng Tôi",
+    "subtitle": "Ba hệ thống chăm sóc da toàn diện — SPOT-FADE, ACNE-PURE và LUMI-GLOW — được bào chế cho làn da nhiệt đới thực sự",
     "addToCart": "Thêm vào giỏ",
     "list": {
-      "p1": {
-        "name": "Nước tẩy trang sen Hậu Giang 1000ml",
-        "desc": "Nước tẩy trang dịu nhẹ, làm sạch lớp trang điểm và bụi bẩn."
+      "sf1": {
+        "name": "SPOT-FADE Cleanser – Sữa Rửa Mặt",
+        "desc": "Sữa rửa mặt enzyme làm sáng da với Kojic Dipalmitate và Papain Enzyme."
       },
-      "p2": {
-        "name": "Tẩy da chết cà phê Đắk Lắk",
-        "desc": "Tẩy tế bào chết cà phê tự nhiên, làm mịn và sáng da."
+      "sf2": {
+        "name": "SPOT-FADE Essence – Nước Thần",
+        "desc": "Nước thần phục hồi làm sáng với Glutathione và 1% Tranexamic Acid."
       },
-      "p3": {
-        "name": "Son dưỡng môi mật ong Cao Bằng",
-        "desc": "Son dưỡng môi với mật ong rừng nguyên chất."
+      "sf3": {
+        "name": "SPOT-FADE Serum – Siêu Tinh Chất",
+        "desc": "Serum chuyên trị nám chuyên sâu với 5% Tranexamic Acid và 2% Alpha Arbutin."
       },
-      "p4": {
-        "name": "Sữa dưỡng thể dừa Bến Tre",
-        "desc": "Sữa dưỡng thể dưỡng ẩm sâu với dầu dừa ép lạnh."
+      "sf4": {
+        "name": "SPOT-FADE Aqua Gel – Kem Phục Hồi",
+        "desc": "Gel kem phục hồi hàng rào da với Bakuchiol 1.0% và Ceramides."
       },
-      "p5": {
-        "name": "Tinh dầu bưởi hồng Tiền Giang",
-        "desc": "Giúp tóc chắc khỏe và giảm rụng tóc."
+      "sf5": {
+        "name": "SPOT-FADE Sunscreen – Kem Chống Nắng",
+        "desc": "Kem chống nắng matte bảo vệ hàng ngày với bộ lọc UV thế hệ mới Tinosorb S & M."
       },
-      "p6": {
-        "name": "Mặt nạ ngủ rau má Sa Pa",
-        "desc": "Mặt nạ ngủ làm dịu cho làn da nhạy cảm."
+      "ap1": {
+        "name": "ACNE-PURE Cleanser – Sữa Rửa Mặt",
+        "desc": "Sữa rửa mặt làm sạch sâu mát lạnh với 2% Salicylic Acid và Zinc PCA."
+      },
+      "ap2": {
+        "name": "ACNE-PURE Toner – Tẩy Da Chết",
+        "desc": "Toner tẩy tế bào chết làm sáng với 2% Encapsulated Salicylic Acid và Witch Hazel."
+      },
+      "ap3": {
+        "name": "ACNE-PURE Serum – Tinh Chất Đặc Biệt",
+        "desc": "Serum trị mụn và hậu mụn chuyên sâu với 5% Azelaic Acid và 5% Niacinamide."
+      },
+      "ap4": {
+        "name": "ACNE-PURE Aqua Gel – Gel Dưỡng Phục Hồi",
+        "desc": "Gel phục hồi dịu nhẹ không dầu với Panthenol và Centella Asiatica."
+      },
+      "ap5": {
+        "name": "ACNE-PURE Spot Gel – Gel Chăm Sóc Điểm",
+        "desc": "Gel trị mụn tại chỗ với 2.5% Benzoyl Peroxide và Tea Tree Oil."
+      },
+      "lg1": {
+        "name": "LUMI-GLOW Cleanser – Sữa Rửa Mặt",
+        "desc": "Sữa rửa mặt enzyme làm sáng da với Kojic Dipalmitate và Papain Enzyme."
+      },
+      "lg2": {
+        "name": "LUMI-GLOW Toner – Nước Cân Bằng",
+        "desc": "Toner cân bằng làm sáng dịu nhẹ với 3% Tranexamic Acid và Centella Asiatica."
+      },
+      "lg3": {
+        "name": "LUMI-GLOW Day Serum – Tinh Chất Ban Ngày",
+        "desc": "Serum chống oxy hóa làm sáng với 10% Vitamin C nguyên chất và 2% Alpha Arbutin."
+      },
+      "lg4": {
+        "name": "LUMI-GLOW Night Repair – Kem Dưỡng Đêm",
+        "desc": "Kem tái tạo da ban đêm với 0.5% Encapsulated Retinol và Ceramides."
+      },
+      "lg5": {
+        "name": "LUMI-GLOW Sunscreen – Kem Chống Nắng",
+        "desc": "Kem chống nắng phổ rộng nhẹ nhàng với Tinosorb S & M."
       }
     }
   },
@@ -47,7 +83,7 @@
     "haveAccount": "Bạn đã có tài khoản?",
     "signIn": "Đăng nhập",
     "emailPlaceholder": "Nhập địa chỉ email",
-    "subscribe": "Đăng ký nhận các thông tin khuyến mãi đầu tiên từ Cocoon",
+    "subscribe": "Đăng ký nhận thông tin mới nhất và ưu đãi từ ORIA",
     "shippingTitle": "Địa chỉ giao hàng",
     "fullName": "Họ và tên",
     "phone": "Nhập số điện thoại",
@@ -57,12 +93,12 @@
     "address": "Số nhà, đường, khu vực",
     "saveInfo": "Lưu thông tin cho lần thanh toán tiếp theo",
     "shippingMethodTitle": "Phương thức vận chuyển",
-    "standardShipping": "Giao hàng tiêu chuẩn (2-3 ngày)",
+    "standardShipping": "Giao hàng tiêu chuẩn (2-5 ngày)",
     "expressShipping": "Giao hàng nhanh (trong 24h)",
     "free": "Miễn phí",
     "paymentMethodTitle": "Phương thức thanh toán",
     "cod": "Thanh toán khi nhận hàng (COD)",
-    "bank": "Chuyển khoản ngân hàng",
+    "bank": "Thanh toán online qua Alepay / Ví MoMo",
     "orderDetails": "Chi tiết đơn hàng",
     "promoLabel": "Nhập mã khuyến mãi hoặc thẻ quà tặng",
     "apply": "Áp dụng",
@@ -77,35 +113,53 @@
     "backToShop": "Quay lại cửa hàng"
   },
   "brand": {
-    "feature1Title": "100% Thuần Chay",
-    "feature1Desc": "Không thành phần từ động vật, không thử nghiệm trên động vật",
-    "feature2Title": "Nguyên Liệu Việt Nam",
-    "feature2Desc": "Nguồn gốc từ những vùng nguyên liệu thiên nhiên tốt nhất Việt Nam",
-    "feature3Title": "An Toàn & Hiệu Quả",
-    "feature3Desc": "Được kiểm nghiệm da liễu, phù hợp mọi loại da",
-    "feature4Title": "Không Paraben",
-    "feature4Desc": "Không hóa chất độc hại, thân thiện với sức khỏe và môi trường",
-    "aboutTitle": "Về Cocoon Original Vietnam",
-    "aboutText": "Cocoon tự hào là mỹ phẩm 100% thuần chay từ thực vật Việt Nam. Chúng tôi tin rằng vẻ đẹp thực sự đến từ thiên nhiên – không gây hại cho động vật, không hóa chất độc hại, an toàn cho cả gia đình bạn.",
+    "feature1Title": "Khoa Học Chứng Minh",
+    "feature1Desc": "Hoạt chất da liễu đã được kiểm chứng với cơ chế rõ ràng và nồng độ cân bằng",
+    "feature2Title": "Tối Ưu Cho Nhiệt Đới",
+    "feature2Desc": "Mọi công thức được thiết kế cho khí hậu nóng ẩm và điều kiện thực tế",
+    "feature3Title": "An Toàn & Minh Bạch",
+    "feature3Desc": "Thành phần nguồn gốc rõ ràng và công thức được kiểm nghiệm nghiêm ngặt",
+    "feature4Title": "Không Thử Nghiệm Động Vật",
+    "feature4Desc": "Không thử nghiệm trên động vật ở bất kỳ giai đoạn nào — kiểm nghiệm trong phòng lab và tình nguyện viên",
+    "aboutTitle": "Về ORIA",
+    "aboutText": "ORIA không chỉ là một cái tên — đó là nhịp điệu tự nhiên của làn da. Từ niềm tin rằng da không cần trở thành thứ gì khác mà cần trở về phiên bản tốt nhất của chính nó, ORIA ra đời như một không gian để tái cân bằng. Chúng tôi kết hợp hoạt chất da liễu đã được kiểm chứng với hiểu biết sâu sắc về hành vi của da trong khí hậu nóng ẩm để tạo ra sản phẩm an toàn, hiệu quả và phù hợp sử dụng lâu dài.",
     "aboutCta": "Tìm hiểu thêm",
     "highlightBadge": "Bán Chạy Nhất",
-    "highlightTitle": "Nước Tẩy Trang Sen Hậu Giang",
-    "highlightDesc": "Nước tẩy trang dịu nhẹ từ chiết xuất hoa sen Hậu Giang, làm sạch sâu lớp trang điểm và bụi bẩn mà không gây khô da.",
+    "highlightTitle": "SPOT-FADE Serum",
+    "highlightDesc": "Serum chuyên trị nám chuyên sâu với 5% Tranexamic Acid, 2% Alpha Arbutin và 5% Niacinamide. Giúp giảm nám, thâm mụn và tông da không đều.",
     "highlightCta": "Mua ngay"
   },
+  "blog": {
+    "title": "Kiến Thức Làm Đẹp",
+    "subtitle": "Mẹo và hướng dẫn từ đội ngũ ORIA",
+    "post1Title": "Quy Trình Chăm Sóc Da Mụn Đúng & Hiệu Quả Tại Nhà",
+    "post1Excerpt": "Da mụn không cần sự chăm sóc mạnh mẽ hơn — nó cần sự chăm sóc đúng cách, kiên trì và nhẫn nại. Dưới đây là những mẹo đơn giản giúp bạn chăm sóc da mụn nhẹ nhàng và bền vững hơn.",
+    "post2Title": "Tẩy Da Chết – Chìa Khóa Để Da Mịn Hơn, Ít Mụn Hơn",
+    "post2Excerpt": "Tẩy da chết là một trong những bước quan trọng nhất nhưng thường bị hiểu nhầm trong chăm sóc da. Khi thực hiện sai cách, tẩy da chết có thể khiến da nhạy cảm hơn. Tìm hiểu cách tẩy da chết đúng và hiệu quả.",
+    "post3Title": "Da Sáng Khoẻ Bắt Đầu Từ Bên Trong: Vitamin C Ban Ngày & Retinol Ban Đêm",
+    "post3Excerpt": "Có một nguyên tắc đơn giản nhưng vô cùng hiệu quả trong chăm sóc da: bảo vệ vào ban ngày, phục hồi vào ban đêm. Tìm hiểu cách kết hợp Vitamin C và Retinol để có làn da sáng hơn, săn chắc và đều màu hơn.",
+    "readMore": "Đọc thêm"
+  },
+  "policies": {
+    "title": "Chính Sách Mua Hàng & Thanh Toán",
+    "paymentMethods": "ORIA hỗ trợ thanh toán khi nhận hàng (COD), thanh toán online qua cổng Alepay và ví điện tử MoMo.",
+    "delivery": "Đơn hàng được xử lý từ Thứ 2 đến Thứ 7. Thời gian giao hàng dự kiến: 2–5 ngày làm việc.",
+    "support": "ORIA hỗ trợ kiểm tra và xử lý các vấn đề liên quan đến sản phẩm trong vòng 7 ngày kể từ ngày nhận hàng.",
+    "exchange": "Hỗ trợ đổi trả sản phẩm đối với lỗi nhà sản xuất, hư hỏng trong vận chuyển hoặc giao nhầm sản phẩm. Liên hệ ORIA trong vòng 48 giờ sau khi nhận hàng."
+  },
   "footer": {
-    "copyright": "© 2025 The Cocoon Original Vietnam. Bảo lưu mọi quyền.",
-    "col1Title": "The Cocoon",
-    "col1Text": "Mỹ phẩm thuần chay 100% từ thiên nhiên Việt Nam.",
-    "col2Title": "Sản phẩm",
-    "col2Link1": "Chăm sóc da mặt",
-    "col2Link2": "Chăm sóc cơ thể",
-    "col2Link3": "Chăm sóc tóc",
-    "col2Link4": "Dưỡng môi",
-    "col3Title": "Hỗ trợ",
+    "copyright": "© 2025 ORIA. Bảo lưu mọi quyền.",
+    "col1Title": "ORIA",
+    "col1Text": "Giải pháp an toàn cho làn da nhiệt đới.",
+    "col2Title": "Bộ Sản Phẩm",
+    "col2Link1": "SPOT-FADE (Trị Nám)",
+    "col2Link2": "ACNE-PURE (Trị Mụn)",
+    "col2Link3": "LUMI-GLOW (Trắng Da)",
+    "col2Link4": "Combo Bộ Sản Phẩm",
+    "col3Title": "Hỗ Trợ",
     "col3Link1": "Chính sách đổi trả",
-    "col3Link2": "Chính sách vận chuyển",
-    "col3Link3": "Câu hỏi thường gặp",
+    "col3Link2": "Chính sách mua hàng & thanh toán",
+    "col3Link3": "Chính sách bảo hành sản phẩm",
     "col3Link4": "Liên hệ",
     "col4Title": "Theo dõi chúng tôi",
     "social1": "Facebook",

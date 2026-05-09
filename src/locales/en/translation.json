@@ -7,38 +7,74 @@
     "cart": "Cart"
   },
   "hero": {
-    "title": "Pure beauty from Vietnamese nature",
-    "subtitle": "100% vegan cosmetics, made from gentle, safe and effective natural Vietnamese ingredients.",
+    "title": "Safe Solutions for Tropical Skin",
+    "subtitle": "Scientifically formulated skincare designed for hot, humid climates — effective, transparent, and trusted for long-term use.",
     "cta": "Shop now"
   },
   "products": {
-    "title": "Featured Products",
-    "subtitle": "Discover our best-selling natural beauty products",
+    "title": "Our Products",
+    "subtitle": "Three complete skincare systems — SPOT-FADE, ACNE-PURE, and LUMI-GLOW — formulated for real tropical skin",
     "addToCart": "Add to cart",
     "list": {
-      "p1": {
-        "name": "Hau Giang Lotus Cleansing Water 1000ml",
-        "desc": "Gentle micellar water that removes makeup and impurities."
+      "sf1": {
+        "name": "SPOT-FADE Cleanser",
+        "desc": "Brightening enzyme facial cleanser with Kojic Dipalmitate and Papain Enzyme."
       },
-      "p2": {
-        "name": "Dak Lak Coffee Body Polish",
-        "desc": "Natural coffee scrub that smooths and brightens skin."
+      "sf2": {
+        "name": "SPOT-FADE Essence",
+        "desc": "Brightening repair essence with Glutathione and 1% Tranexamic Acid."
       },
-      "p3": {
-        "name": "Cao Bang Honey Lip Balm",
-        "desc": "Nourishing lip balm with pure mountain honey."
+      "sf3": {
+        "name": "SPOT-FADE Serum",
+        "desc": "Intensive dark spot correcting serum with 5% Tranexamic Acid and 2% Alpha Arbutin."
       },
-      "p4": {
-        "name": "Ben Tre Coconut Body Lotion",
-        "desc": "Deeply moisturizing lotion with cold-pressed coconut oil."
+      "sf4": {
+        "name": "SPOT-FADE Aqua Gel",
+        "desc": "Barrier repair aqua gel cream with Bakuchiol 1.0% and Ceramides."
       },
-      "p5": {
-        "name": "Tien Giang Pink Pomelo Hair Tonic",
-        "desc": "Strengthens hair and reduces hair fall."
+      "sf5": {
+        "name": "SPOT-FADE Sunscreen",
+        "desc": "Daily protective matte sunscreen with next-gen UV filters Tinosorb S & M."
       },
-      "p6": {
-        "name": "Sa Pa Centella Sleeping Mask",
-        "desc": "Soothing overnight mask for sensitive skin."
+      "ap1": {
+        "name": "ACNE-PURE Cleanser",
+        "desc": "Deep purifying cooling cleanser with 2% Salicylic Acid and Zinc PCA."
+      },
+      "ap2": {
+        "name": "ACNE-PURE Toner",
+        "desc": "Clarifying exfoliating toner with 2% Encapsulated Salicylic Acid and Witch Hazel."
+      },
+      "ap3": {
+        "name": "ACNE-PURE Serum",
+        "desc": "Intensive clarifying & post-acne serum with 5% Azelaic Acid and 5% Niacinamide."
+      },
+      "ap4": {
+        "name": "ACNE-PURE Aqua Gel",
+        "desc": "Oil-free soothing recovery gel with Panthenol and Centella Asiatica."
+      },
+      "ap5": {
+        "name": "ACNE-PURE Spot Gel",
+        "desc": "Targeted blemish treatment gel with 2.5% Benzoyl Peroxide and Tea Tree Oil."
+      },
+      "lg1": {
+        "name": "LUMI-GLOW Cleanser",
+        "desc": "Brightening enzyme facial cleanser with Kojic Dipalmitate and Papain Enzyme."
+      },
+      "lg2": {
+        "name": "LUMI-GLOW Toner",
+        "desc": "Brightening soothing balancing toner with 3% Tranexamic Acid and Centella Asiatica."
+      },
+      "lg3": {
+        "name": "LUMI-GLOW Day Serum",
+        "desc": "Antioxidant brightening serum with 10% Pure Vitamin C and 2% Alpha Arbutin."
+      },
+      "lg4": {
+        "name": "LUMI-GLOW Night Repair",
+        "desc": "Overnight skin renewal cream with 0.5% Encapsulated Retinol and Ceramides."
+      },
+      "lg5": {
+        "name": "LUMI-GLOW Sunscreen",
+        "desc": "Lightweight broad-spectrum UV protection cream with Tinosorb S & M."
       }
     }
   },
@@ -47,7 +83,7 @@
     "haveAccount": "Already have an account?",
     "signIn": "Sign in",
     "emailPlaceholder": "Enter email address",
-    "subscribe": "Subscribe to receive promotional information from Cocoon",
+    "subscribe": "Subscribe to receive the latest updates and offers from ORIA",
     "shippingTitle": "Shipping address",
     "fullName": "Full name",
     "phone": "Enter phone number",
@@ -57,12 +93,12 @@
     "address": "House number, street, area",
     "saveInfo": "Save information for next checkout",
     "shippingMethodTitle": "Shipping method",
-    "standardShipping": "Standard delivery (2-3 days)",
+    "standardShipping": "Standard delivery (2-5 days)",
     "expressShipping": "Express delivery (within 24h)",
     "free": "Free",
     "paymentMethodTitle": "Payment method",
     "cod": "Cash on delivery (COD)",
-    "bank": "Bank transfer",
+    "bank": "Online payment via Alepay / MoMo e-wallet",
     "orderDetails": "Order details",
     "promoLabel": "Enter promo code or gift card",
     "apply": "Apply",
@@ -77,35 +113,53 @@
     "backToShop": "Back to shop"
   },
   "brand": {
-    "feature1Title": "100% Vegan",
-    "feature1Desc": "No animal-derived ingredients, never tested on animals",
-    "feature2Title": "Vietnamese Ingredients",
-    "feature2Desc": "Sourced from Vietnam's finest natural growing regions",
-    "feature3Title": "Safe & Effective",
-    "feature3Desc": "Dermatologically tested, suitable for all skin types",
-    "feature4Title": "No Parabens",
-    "feature4Desc": "Free from harmful chemicals, healthy for you and the planet",
-    "aboutTitle": "About Cocoon Original Vietnam",
-    "aboutText": "Cocoon is proudly 100% vegan cosmetics made from Vietnamese plants. We believe true beauty comes from nature — cruelty-free, chemical-free, safe for your whole family.",
+    "feature1Title": "Science-Backed",
+    "feature1Desc": "Proven dermatological actives with clear mechanisms and balanced concentrations",
+    "feature2Title": "Tropical-Optimized",
+    "feature2Desc": "Every formula is designed for hot, humid climates and real-life conditions",
+    "feature3Title": "Safety & Transparency",
+    "feature3Desc": "Clear-origin ingredients and rigorously tested formulas for long-term use",
+    "feature4Title": "Cruelty-Free",
+    "feature4Desc": "No animal testing at any stage — lab-tested and human-volunteer tested",
+    "aboutTitle": "About ORIA",
+    "aboutText": "ORIA is more than just a name — it represents the natural rhythm of the skin. From the belief that skin doesn't need to become something else but needs to return to its best self, ORIA was created as a space for recalibration. We combine proven dermatological actives with a deep understanding of skin behavior in hot, humid climates to create products that are safe, effective, and suitable for long-term use.",
     "aboutCta": "Learn more",
     "highlightBadge": "Best Seller",
-    "highlightTitle": "Hau Giang Lotus Cleansing Water",
-    "highlightDesc": "A gentle micellar water made from Hau Giang lotus extract that deeply cleanses makeup and impurities without drying the skin.",
+    "highlightTitle": "SPOT-FADE Serum",
+    "highlightDesc": "Intensive dark spot correcting serum powered by 5% Tranexamic Acid, 2% Alpha Arbutin, and 5% Niacinamide. Helps reduce dark spots, post-acne marks, and uneven skin tone.",
     "highlightCta": "Shop now"
   },
+  "blog": {
+    "title": "Skincare Insights",
+    "subtitle": "Tips and guides from the ORIA team",
+    "post1Title": "A Complete & Effective Acne Skincare Routine at Home",
+    "post1Excerpt": "Acne-prone skin doesn't need more intensity — it needs the right care, done consistently and patiently. Here are simple tips to help you care for acne-prone skin in a more gentle and sustainable way.",
+    "post2Title": "Exfoliation – The Key to Smoother Skin, Fewer Breakouts, and Better Absorption",
+    "post2Excerpt": "Exfoliation is one of the most essential yet often misunderstood steps in skincare. When done incorrectly, it can make skin more sensitive. Learn how to exfoliate correctly and effectively.",
+    "post3Title": "Bright, Healthy Skin Starts Within: Vitamin C by Day & Retinol by Night",
+    "post3Excerpt": "There is one simple yet highly effective skincare principle: protect during the day, repair at night. Learn how to combine Vitamin C and Retinol for brighter, firmer, more even-toned skin.",
+    "readMore": "Read more"
+  },
+  "policies": {
+    "title": "Purchasing & Payment",
+    "paymentMethods": "ORIA supports Cash on Delivery (COD), online payment via Alepay, and MoMo e-wallet.",
+    "delivery": "Orders are processed Monday–Saturday. Estimated delivery: 2–5 business days.",
+    "support": "ORIA supports inspection and handling of product-related issues within 7 days of receipt.",
+    "exchange": "Product exchange or refund is supported for manufacturing defects, shipping damage, or incorrect items. Contact ORIA within 48 hours of receiving the order."
+  },
   "footer": {
-    "copyright": "© 2025 The Cocoon Original Vietnam. All rights reserved.",
-    "col1Title": "The Cocoon",
-    "col1Text": "100% vegan cosmetics from Vietnamese nature.",
-    "col2Title": "Products",
-    "col2Link1": "Facial care",
-    "col2Link2": "Body care",
-    "col2Link3": "Hair care",
-    "col2Link4": "Lip care",
+    "copyright": "© 2025 ORIA. All rights reserved.",
+    "col1Title": "ORIA",
+    "col1Text": "Safe Solutions for Tropical Skin.",
+    "col2Title": "Collections",
+    "col2Link1": "SPOT-FADE (Dark Spots)",
+    "col2Link2": "ACNE-PURE (Acne Care)",
+    "col2Link3": "LUMI-GLOW (Brightening)",
+    "col2Link4": "Complete Sets",
     "col3Title": "Support",
-    "col3Link1": "Return policy",
-    "col3Link2": "Shipping policy",
-    "col3Link3": "FAQ",
+    "col3Link1": "Return & Exchange Policy",
+    "col3Link2": "Purchasing & Payment Policy",
+    "col3Link3": "Product Support Policy",
     "col3Link4": "Contact",
     "col4Title": "Follow us",
     "social1": "Facebook",

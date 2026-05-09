@@ -12,7 +12,7 @@ const brandFeatures = [
   { Icon: FaWandMagicSparkles, key: 'feature4' },
 ]
 
-const featuredProduct = products[0]
+const featuredProduct = products.find(p => p.id === 'sf3') || products[0]
 
 export default function Home() {
   const { t } = useTranslation()
@@ -68,11 +68,9 @@ export default function Home() {
       <section className="highlight-section">
         <div className="container highlight-inner">
           <div className="highlight-image-wrap">
-            <img
-              src="/Chai_Sen_924c4d6134.png"
-              alt={t('brand.highlightTitle')}
-              className="highlight-img"
-            />
+            <div className="product-image highlight-icon-placeholder" aria-hidden="true">
+              {(() => { const Icon = getProductIcon(featuredProduct.icon); return <Icon className="product-icon highlight-icon" /> })()}
+            </div>
           </div>
           <div className="highlight-text">
             <span className="highlight-badge">{t('brand.highlightBadge')}</span>
@@ -124,6 +122,22 @@ export default function Home() {
                 </article>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== BLOG / INSIGHTS SECTION ===== */}
+      <section className="section" id="blog" style={{ background: 'var(--color-bg-alt, #f9f9f9)' }}>
+        <div className="container">
+          <h2 className="section-title">{t('blog.title')}</h2>
+          <p className="section-sub">{t('blog.subtitle')}</p>
+          <div className="product-grid">
+            {[1, 2, 3].map((n) => (
+              <article key={n} className="product-card" style={{ cursor: 'default' }}>
+                <h3 className="product-name">{t(`blog.post${n}Title`)}</h3>
+                <p className="product-desc">{t(`blog.post${n}Excerpt`)}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
