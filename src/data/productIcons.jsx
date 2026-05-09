@@ -28,5 +28,9 @@ const legacyEmojiIconMap = {
   '🌿': FaLeaf,
 }
 
+/**
+ * Resolve product icon component from the new icon key and legacy emoji value.
+ * This keeps old cart data in localStorage rendering correctly during migration.
+ */
 export const getProductIcon = (iconKey, legacyEmoji) =>
   productIconMap[iconKey] || legacyEmojiIconMap[legacyEmoji] || defaultProductIcon
