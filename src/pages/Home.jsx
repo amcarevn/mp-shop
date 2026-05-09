@@ -68,8 +68,8 @@ export default function Home() {
       <section className="highlight-section">
         <div className="container highlight-inner">
           <div className="highlight-image-wrap">
-            <div className="product-image" aria-hidden="true" style={{ width: '100%', minHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6rem' }}>
-              💊
+            <div className="product-image highlight-icon-placeholder" aria-hidden="true">
+              {(() => { const Icon = getProductIcon(featuredProduct.icon); return <Icon className="product-icon highlight-icon" /> })()}
             </div>
           </div>
           <div className="highlight-text">
