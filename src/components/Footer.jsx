@@ -37,9 +37,9 @@ export default function Footer() {
         <div className="footer-col">
           <h4>{t('footer.col4Title')}</h4>
           <div className="footer-social">
-            <a href="#contact" className="social-link">f {t('footer.social1')}</a>
+            <a href="#contact" className="social-link">📘 {t('footer.social1')}</a>
             <a href="#contact" className="social-link">📷 {t('footer.social2')}</a>
-            <a href="#contact" className="social-link">▶ {t('footer.social3')}</a>
+            <a href="#contact" className="social-link">🎵 {t('footer.social3')}</a>
             <a href="#contact" className="social-link">▶ {t('footer.social4')}</a>
           </div>
         </div>

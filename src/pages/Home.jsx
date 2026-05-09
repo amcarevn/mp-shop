@@ -10,6 +10,8 @@ const brandFeatures = [
   { icon: '✨', key: 'feature4' },
 ]
 
+const featuredProduct = products[0]
+
 export default function Home() {
   const { t } = useTranslation()
   const { addItem } = useCart()
@@ -60,6 +62,7 @@ export default function Home() {
       </section>
 
       {/* ===== FEATURED PRODUCT HIGHLIGHT ===== */}
+      {featuredProduct && (
       <section className="highlight-section">
         <div className="container highlight-inner">
           <div className="highlight-image-wrap">
@@ -73,11 +76,11 @@ export default function Home() {
             <span className="highlight-badge">{t('brand.highlightBadge')}</span>
             <h2>{t('brand.highlightTitle')}</h2>
             <p>{t('brand.highlightDesc')}</p>
-            <div className="highlight-price">{formatVND(products[0].price)}</div>
+            <div className="highlight-price">{formatVND(featuredProduct.price)}</div>
             <button
               className="btn-primary"
               onClick={() => {
-                handleAdd(products[0])
+                handleAdd(featuredProduct)
                 navigate('/checkout')
               }}
             >
@@ -86,6 +89,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ===== PRODUCTS GRID ===== */}
       <section className="section" id="products">
