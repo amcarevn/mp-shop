@@ -163,8 +163,8 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 6px;
   font-weight: 600;
   color: var(--color-muted);
-  min-height: 36px;
-  min-width: 36px;
+  min-height: 44px;
+  min-width: 44px;
 }
 .lang-switch button.active {
   background: var(--color-gold);

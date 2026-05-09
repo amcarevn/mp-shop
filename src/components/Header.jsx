@@ -83,7 +83,9 @@ export default function Header() {
         <div className="mobile-nav-overlay" onClick={closeMenu}>
           <nav className="mobile-nav" onClick={(e) => e.stopPropagation()}>
             <div className="mobile-nav-header">
-              <span className="logo logo-name">ORIA</span>
+              <Link to="/" className="logo" onClick={closeMenu}>
+                <span className="logo-name">ORIA</span>
+              </Link>
               <button
                 type="button"
                 className="hamburger"
