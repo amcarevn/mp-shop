@@ -20,5 +20,27 @@ export const products = [
   { id: 'lg5', icon: 'citrus',   price: 490000, stock: 25 },
 ]
 
-export const formatVND = (n) =>
-  new Intl.NumberFormat('vi-VN').format(n) + ' đ'
+const DEFAULT_VND_TO_USD_EXCHANGE_RATE = 25000
+const parsedExchangeRate = Number(import.meta.env.VITE_VND_TO_USD_RATE)
+const VND_TO_USD_EXCHANGE_RATE =
+  Number.isFinite(parsedExchangeRate) && parsedExchangeRate > 0
+    ? parsedExchangeRate
+    : DEFAULT_VND_TO_USD_EXCHANGE_RATE
+
+export const formatPrice = (n, language = 'vi') => {
+  const normalizedLanguage = String(language || 'vi').toLowerCase()
+  const amount = Number(n)
+  const safeAmount = Number.isFinite(amount) ? amount : 0
+
+  if (normalizedLanguage.startsWith('en')) {
+    const amountInUsd = safeAmount / VND_TO_USD_EXCHANGE_RATE
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(amountInUsd)
+  }
+
+  return new Intl.NumberFormat('vi-VN').format(safeAmount) + ' đ'
+}
+
+export const formatVND = (n) => formatPrice(n, 'vi')
