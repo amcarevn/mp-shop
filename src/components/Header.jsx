@@ -1,5 +1,6 @@
 import { NavLink, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { FaCartShopping } from 'react-icons/fa6'
 import { useCart } from '../context/CartContext.jsx'
 
 export default function Header() {
@@ -44,7 +45,8 @@ export default function Header() {
           </div>
 
           <Link to="/checkout" className="cart-btn">
-            🛒 {t('nav.cart')}
+            <FaCartShopping className="inline-icon" />
+            {t('nav.cart')}
             {count > 0 && <span className="cart-count">{count}</span>}
           </Link>
         </div>
