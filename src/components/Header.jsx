@@ -12,10 +12,9 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <Link to="/" className="logo" aria-label="The Cocoon">
-          <span className="logo-the">the</span>
-          <span className="logo-name">COCOON</span>
-          <span className="logo-sub">ORIGINAL VIETNAM</span>
+        <Link to="/" className="logo" aria-label="ORIA">
+          <span className="logo-name">ORIA</span>
+          <span className="logo-sub">SAFE SOLUTIONS FOR TROPICAL SKIN</span>
         </Link>
 
         <nav className="nav">
