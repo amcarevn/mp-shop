@@ -29,16 +29,22 @@ const VND_TO_USD_EXCHANGE_RATE =
 
 export const formatPrice = (n, language = 'vi') => {
   const normalizedLanguage = String(language || 'vi').toLowerCase()
+  const amount = Number(n)
+  const safeAmount = Number.isFinite(amount) ? amount : 0
+  const safeExchangeRate =
+    Number.isFinite(VND_TO_USD_EXCHANGE_RATE) && VND_TO_USD_EXCHANGE_RATE > 0
+      ? VND_TO_USD_EXCHANGE_RATE
+      : 1
 
   if (normalizedLanguage.startsWith('en')) {
-    const amountInUsd = Number(n) / VND_TO_USD_EXCHANGE_RATE
+    const amountInUsd = safeAmount / safeExchangeRate
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
     }).format(amountInUsd)
   }
 
-  return new Intl.NumberFormat('vi-VN').format(n) + ' đ'
+  return new Intl.NumberFormat('vi-VN').format(safeAmount) + ' đ'
 }
 
 export const formatVND = (n) => formatPrice(n, 'vi')
