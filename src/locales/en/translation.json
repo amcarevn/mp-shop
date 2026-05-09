@@ -76,7 +76,41 @@
     "emptyCart": "Your cart is empty.",
     "backToShop": "Back to shop"
   },
+  "brand": {
+    "feature1Title": "100% Vegan",
+    "feature1Desc": "No animal-derived ingredients, never tested on animals",
+    "feature2Title": "Vietnamese Ingredients",
+    "feature2Desc": "Sourced from Vietnam's finest natural growing regions",
+    "feature3Title": "Safe & Effective",
+    "feature3Desc": "Dermatologically tested, suitable for all skin types",
+    "feature4Title": "No Parabens",
+    "feature4Desc": "Free from harmful chemicals, healthy for you and the planet",
+    "aboutTitle": "About Cocoon Original Vietnam",
+    "aboutText": "Cocoon is proudly 100% vegan cosmetics made from Vietnamese plants. We believe true beauty comes from nature — cruelty-free, chemical-free, safe for your whole family.",
+    "aboutCta": "Learn more",
+    "highlightBadge": "Best Seller",
+    "highlightTitle": "Hau Giang Lotus Cleansing Water",
+    "highlightDesc": "A gentle micellar water made from Hau Giang lotus extract that deeply cleanses makeup and impurities without drying the skin.",
+    "highlightCta": "Shop now"
+  },
   "footer": {
-    "copyright": "© 2025 The Cocoon Original Vietnam. All rights reserved."
+    "copyright": "© 2025 The Cocoon Original Vietnam. All rights reserved.",
+    "col1Title": "The Cocoon",
+    "col1Text": "100% vegan cosmetics from Vietnamese nature.",
+    "col2Title": "Products",
+    "col2Link1": "Facial care",
+    "col2Link2": "Body care",
+    "col2Link3": "Hair care",
+    "col2Link4": "Lip care",
+    "col3Title": "Support",
+    "col3Link1": "Return policy",
+    "col3Link2": "Shipping policy",
+    "col3Link3": "FAQ",
+    "col3Link4": "Contact",
+    "col4Title": "Follow us",
+    "social1": "Facebook",
+    "social2": "Instagram",
+    "social3": "TikTok",
+    "social4": "YouTube"
   }
 }
