@@ -25,19 +25,17 @@ const parsedExchangeRate = Number(import.meta.env.VITE_VND_TO_USD_RATE)
 const VND_TO_USD_EXCHANGE_RATE =
   Number.isFinite(parsedExchangeRate) && parsedExchangeRate > 0
     ? parsedExchangeRate
-    : DEFAULT_VND_TO_USD_EXCHANGE_RATE
+    : Number.isFinite(DEFAULT_VND_TO_USD_EXCHANGE_RATE) && DEFAULT_VND_TO_USD_EXCHANGE_RATE > 0
+      ? DEFAULT_VND_TO_USD_EXCHANGE_RATE
+      : 1
 
 export const formatPrice = (n, language = 'vi') => {
   const normalizedLanguage = String(language || 'vi').toLowerCase()
   const amount = Number(n)
   const safeAmount = Number.isFinite(amount) ? amount : 0
-  const safeExchangeRate =
-    Number.isFinite(VND_TO_USD_EXCHANGE_RATE) && VND_TO_USD_EXCHANGE_RATE > 0
-      ? VND_TO_USD_EXCHANGE_RATE
-      : 1
 
   if (normalizedLanguage.startsWith('en')) {
-    const amountInUsd = safeAmount / safeExchangeRate
+    const amountInUsd = safeAmount / VND_TO_USD_EXCHANGE_RATE
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
