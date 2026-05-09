@@ -20,15 +20,17 @@ export const products = [
   { id: 'lg5', icon: 'citrus',   price: 490000, stock: 25 },
 ]
 
+const VND_TO_USD_EXCHANGE_RATE = 25000
+
 export const formatPrice = (n, language = 'vi') => {
   const normalizedLanguage = String(language || 'vi').toLowerCase()
 
   if (normalizedLanguage.startsWith('en')) {
+    const amountInUsd = Number(n) / VND_TO_USD_EXCHANGE_RATE
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      maximumFractionDigits: 0,
-    }).format(n)
+    }).format(amountInUsd)
   }
 
   return new Intl.NumberFormat('vi-VN').format(n) + ' đ'
