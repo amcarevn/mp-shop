@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart"
+  },
+  "hero": {
+    "title": "Pure beauty from Vietnamese nature",
+    "subtitle": "100% vegan cosmetics, made from gentle, safe and effective natural Vietnamese ingredients.",
+    "cta": "Shop now"
+  },
+  "products": {
+    "title": "Featured Products",
+    "subtitle": "Discover our best-selling natural beauty products",
+    "addToCart": "Add to cart",
+    "list": {
+      "p1": {
+        "name": "Hau Giang Lotus Cleansing Water 1000ml",
+        "desc": "Gentle micellar water that removes makeup and impurities."
+      },
+      "p2": {
+        "name": "Dak Lak Coffee Body Polish",
+        "desc": "Natural coffee scrub that smooths and brightens skin."
+      },
+      "p3": {
+        "name": "Cao Bang Honey Lip Balm",
+        "desc": "Nourishing lip balm with pure mountain honey."
+      },
+      "p4": {
+        "name": "Ben Tre Coconut Body Lotion",
+        "desc": "Deeply moisturizing lotion with cold-pressed coconut oil."
+      },
+      "p5": {
+        "name": "Tien Giang Pink Pomelo Hair Tonic",
+        "desc": "Strengthens hair and reduces hair fall."
+      },
+      "p6": {
+        "name": "Sa Pa Centella Sleeping Mask",
+        "desc": "Soothing overnight mask for sensitive skin."
+      }
+    }
+  },
+  "checkout": {
+    "contactTitle": "Your contact information",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "emailPlaceholder": "Enter email address",
+    "subscribe": "Subscribe to receive promotional information from Cocoon",
+    "shippingTitle": "Shipping address",
+    "fullName": "Full name",
+    "phone": "Enter phone number",
+    "province": "Choose Province / City",
+    "district": "Choose District",
+    "ward": "Choose Ward / Commune",
+    "address": "House number, street, area",
+    "saveInfo": "Save information for next checkout",
+    "shippingMethodTitle": "Shipping method",
+    "standardShipping": "Standard delivery (2-3 days)",
+    "expressShipping": "Express delivery (within 24h)",
+    "free": "Free",
+    "paymentMethodTitle": "Payment method",
+    "cod": "Cash on delivery (COD)",
+    "bank": "Bank transfer",
+    "orderDetails": "Order details",
+    "promoLabel": "Enter promo code or gift card",
+    "apply": "Apply",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "shippingFee": "Shipping fee",
+    "total": "Total",
+    "stockLeft": "Only {{count}} left",
+    "placeOrder": "Place order",
+    "agreement": "* By clicking Place Order, you agree to our terms, sale policy and privacy policy on the Website.",
+    "emptyCart": "Your cart is empty.",
+    "backToShop": "Back to shop"
+  },
+  "footer": {
+    "copyright": "© 2025 The Cocoon Original Vietnam. All rights reserved."
+  }
+}
