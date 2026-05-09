@@ -76,7 +76,41 @@
     "emptyCart": "Giỏ hàng của bạn đang trống.",
     "backToShop": "Quay lại cửa hàng"
   },
+  "brand": {
+    "feature1Title": "100% Thuần Chay",
+    "feature1Desc": "Không thành phần từ động vật, không thử nghiệm trên động vật",
+    "feature2Title": "Nguyên Liệu Việt Nam",
+    "feature2Desc": "Nguồn gốc từ những vùng nguyên liệu thiên nhiên tốt nhất Việt Nam",
+    "feature3Title": "An Toàn & Hiệu Quả",
+    "feature3Desc": "Được kiểm nghiệm da liễu, phù hợp mọi loại da",
+    "feature4Title": "Không Paraben",
+    "feature4Desc": "Không hóa chất độc hại, thân thiện với sức khỏe và môi trường",
+    "aboutTitle": "Về Cocoon Original Vietnam",
+    "aboutText": "Cocoon tự hào là mỹ phẩm 100% thuần chay từ thực vật Việt Nam. Chúng tôi tin rằng vẻ đẹp thực sự đến từ thiên nhiên – không gây hại cho động vật, không hóa chất độc hại, an toàn cho cả gia đình bạn.",
+    "aboutCta": "Tìm hiểu thêm",
+    "highlightBadge": "Bán Chạy Nhất",
+    "highlightTitle": "Nước Tẩy Trang Sen Hậu Giang",
+    "highlightDesc": "Nước tẩy trang dịu nhẹ từ chiết xuất hoa sen Hậu Giang, làm sạch sâu lớp trang điểm và bụi bẩn mà không gây khô da.",
+    "highlightCta": "Mua ngay"
+  },
   "footer": {
-    "copyright": "© 2025 The Cocoon Original Vietnam. Bảo lưu mọi quyền."
+    "copyright": "© 2025 The Cocoon Original Vietnam. Bảo lưu mọi quyền.",
+    "col1Title": "The Cocoon",
+    "col1Text": "Mỹ phẩm thuần chay 100% từ thiên nhiên Việt Nam.",
+    "col2Title": "Sản phẩm",
+    "col2Link1": "Chăm sóc da mặt",
+    "col2Link2": "Chăm sóc cơ thể",
+    "col2Link3": "Chăm sóc tóc",
+    "col2Link4": "Dưỡng môi",
+    "col3Title": "Hỗ trợ",
+    "col3Link1": "Chính sách đổi trả",
+    "col3Link2": "Chính sách vận chuyển",
+    "col3Link3": "Câu hỏi thường gặp",
+    "col3Link4": "Liên hệ",
+    "col4Title": "Theo dõi chúng tôi",
+    "social1": "Facebook",
+    "social2": "Instagram",
+    "social3": "TikTok",
+    "social4": "YouTube"
   }
 }

@@ -3,6 +3,15 @@ import { useNavigate } from 'react-router-dom'
 import { products, formatVND } from '../data/products.js'
 import { useCart } from '../context/CartContext.jsx'
 
+const brandFeatures = [
+  { icon: '🌿', key: 'feature1' },
+  { icon: '🇻🇳', key: 'feature2' },
+  { icon: '🛡️', key: 'feature3' },
+  { icon: '✨', key: 'feature4' },
+]
+
+const featuredProduct = products[0]
+
 export default function Home() {
   const { t } = useTranslation()
   const { addItem } = useCart()
@@ -20,8 +29,10 @@ export default function Home() {
 
   return (
     <>
+      {/* ===== HERO BANNER ===== */}
       <section className="hero">
-        <div className="container">
+        <div className="hero-bg" />
+        <div className="container hero-content">
           <h1>{t('hero.title')}</h1>
           <p>{t('hero.subtitle')}</p>
           <button className="btn-primary" onClick={() => {
@@ -33,6 +44,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== BRAND FEATURES STRIP ===== */}
+      <section className="brand-features">
+        <div className="container">
+          <div className="brand-features-grid">
+            {brandFeatures.map(({ icon, key }) => (
+              <div key={key} className="brand-feature-item">
+                <span className="brand-feature-icon">{icon}</span>
+                <div>
+                  <strong>{t(`brand.${key}Title`)}</strong>
+                  <p>{t(`brand.${key}Desc`)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FEATURED PRODUCT HIGHLIGHT ===== */}
+      {featuredProduct && (
+      <section className="highlight-section">
+        <div className="container highlight-inner">
+          <div className="highlight-image-wrap">
+            <img
+              src="/Chai_Sen_924c4d6134.png"
+              alt={t('brand.highlightTitle')}
+              className="highlight-img"
+            />
+          </div>
+          <div className="highlight-text">
+            <span className="highlight-badge">{t('brand.highlightBadge')}</span>
+            <h2>{t('brand.highlightTitle')}</h2>
+            <p>{t('brand.highlightDesc')}</p>
+            <div className="highlight-price">{formatVND(featuredProduct.price)}</div>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                handleAdd(featuredProduct)
+                navigate('/checkout')
+              }}
+            >
+              {t('brand.highlightCta')}
+            </button>
+          </div>
+        </div>
+      </section>
+      )}
+
+      {/* ===== PRODUCTS GRID ===== */}
       <section className="section" id="products">
         <div className="container">
           <h2 className="section-title">{t('products.title')}</h2>
@@ -65,6 +124,16 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ===== ABOUT / BRAND SECTION ===== */}
+      <section className="about-section" id="about">
+        <div className="about-bg" />
+        <div className="container about-content">
+          <h2>{t('brand.aboutTitle')}</h2>
+          <p>{t('brand.aboutText')}</p>
+          <a href="#products" className="btn-outline">{t('brand.aboutCta')}</a>
         </div>
       </section>
     </>
