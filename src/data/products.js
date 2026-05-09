@@ -20,7 +20,12 @@ export const products = [
   { id: 'lg5', icon: 'citrus',   price: 490000, stock: 25 },
 ]
 
-const VND_TO_USD_EXCHANGE_RATE = 25000
+const DEFAULT_VND_TO_USD_EXCHANGE_RATE = 25000
+const parsedExchangeRate = Number(import.meta.env.VITE_VND_TO_USD_RATE)
+const VND_TO_USD_EXCHANGE_RATE =
+  Number.isFinite(parsedExchangeRate) && parsedExchangeRate > 0
+    ? parsedExchangeRate
+    : DEFAULT_VND_TO_USD_EXCHANGE_RATE
 
 export const formatPrice = (n, language = 'vi') => {
   const normalizedLanguage = String(language || 'vi').toLowerCase()
