@@ -20,5 +20,18 @@ export const products = [
   { id: 'lg5', icon: 'citrus',   price: 490000, stock: 25 },
 ]
 
-export const formatVND = (n) =>
-  new Intl.NumberFormat('vi-VN').format(n) + ' đ'
+export const formatPrice = (n, language = 'vi') => {
+  const normalizedLanguage = String(language || 'vi').toLowerCase()
+
+  if (normalizedLanguage.startsWith('en')) {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    }).format(n)
+  }
+
+  return new Intl.NumberFormat('vi-VN').format(n) + ' đ'
+}
+
+export const formatVND = (n) => formatPrice(n, 'vi')

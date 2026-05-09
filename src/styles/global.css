@@ -559,7 +559,7 @@ button { font-family: inherit; cursor: pointer; }
     font-size: 22px;
   }
   .product-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 }

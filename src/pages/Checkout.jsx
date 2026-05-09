@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { FaBuildingColumns, FaMoneyBillWave, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext.jsx'
-import { formatVND } from '../data/products.js'
+import { formatPrice } from '../data/products.js'
 import { getProductIcon } from '../data/productIcons.jsx'
 
 export default function Checkout() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { items, updateQty, removeItem, subtotal } = useCart()
 
   const [shipping, setShipping] = useState('standard')
@@ -141,7 +141,7 @@ export default function Checkout() {
                 onChange={() => setShipping('express')}
               />
               <span>{t('checkout.expressShipping')}</span>
-              <span className="price">{formatVND(30000)}</span>
+              <span className="price">{formatPrice(30000, i18n.resolvedLanguage)}</span>
             </label>
           </section>
 
@@ -219,7 +219,7 @@ export default function Checkout() {
                         )}
                       </div>
                       <span className="order-item-price">
-                        {formatVND(it.price * it.qty)}
+                        {formatPrice(it.price * it.qty, i18n.resolvedLanguage)}
                       </span>
                       <button
                         type="button"
@@ -248,19 +248,19 @@ export default function Checkout() {
                 <div className="totals">
                   <div className="totals-row">
                     <span>{t('checkout.subtotal')}</span>
-                    <span>{formatVND(subtotal)}</span>
+                    <span>{formatPrice(subtotal, i18n.resolvedLanguage)}</span>
                   </div>
                   <div className="totals-row">
                     <span>{t('checkout.discount')}</span>
-                    <span>{formatVND(discount)}</span>
+                    <span>{formatPrice(discount, i18n.resolvedLanguage)}</span>
                   </div>
                   <div className="totals-row">
                     <span>{t('checkout.shippingFee')}</span>
-                    <span>{shippingFee === 0 ? t('checkout.free') : formatVND(shippingFee)}</span>
+                    <span>{shippingFee === 0 ? t('checkout.free') : formatPrice(shippingFee, i18n.resolvedLanguage)}</span>
                   </div>
                   <div className="totals-row total">
                     <span>{t('checkout.total')}</span>
-                    <span>{formatVND(total)}</span>
+                    <span>{formatPrice(total, i18n.resolvedLanguage)}</span>
                   </div>
                 </div>
 

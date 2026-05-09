@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { FaLeaf, FaLocationDot, FaShieldHalved, FaWandMagicSparkles } from 'react-icons/fa6'
-import { products, formatVND } from '../data/products.js'
+import { products, formatPrice } from '../data/products.js'
 import { getProductIcon } from '../data/productIcons.jsx'
 import { useCart } from '../context/CartContext.jsx'
 
@@ -15,7 +15,7 @@ const brandFeatures = [
 const featuredProduct = products.find(p => p.id === 'sf3') || products[0]
 
 export default function Home() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { addItem } = useCart()
   const navigate = useNavigate()
 
@@ -76,7 +76,7 @@ export default function Home() {
             <span className="highlight-badge">{t('brand.highlightBadge')}</span>
             <h2>{t('brand.highlightTitle')}</h2>
             <p>{t('brand.highlightDesc')}</p>
-            <div className="highlight-price">{formatVND(featuredProduct.price)}</div>
+            <div className="highlight-price">{formatPrice(featuredProduct.price, i18n.resolvedLanguage)}</div>
             <button
               className="btn-primary"
               onClick={() => {
@@ -108,7 +108,7 @@ export default function Home() {
                   <h3 className="product-name">{t(`products.list.${p.id}.name`)}</h3>
                   <p className="product-desc">{t(`products.list.${p.id}.desc`)}</p>
                   <div className="product-bottom">
-                    <span className="product-price">{formatVND(p.price)}</span>
+                    <span className="product-price">{formatPrice(p.price, i18n.resolvedLanguage)}</span>
                     <button
                       className="btn-add"
                       onClick={() => {
