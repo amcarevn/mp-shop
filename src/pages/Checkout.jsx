@@ -4,7 +4,7 @@ import { FaBuildingColumns, FaMoneyBillWave, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext.jsx'
 import { formatVND } from '../data/products.js'
-import { defaultProductIcon, productIconMap } from '../data/productIcons.jsx'
+import { getProductIcon } from '../data/productIcons.jsx'
 
 export default function Checkout() {
   const { t } = useTranslation()
@@ -191,7 +191,7 @@ export default function Checkout() {
             ) : (
               <>
                 {items.map((it) => {
-                  const ItemIcon = productIconMap[it.icon] || defaultProductIcon
+                  const ItemIcon = getProductIcon(it.icon, it.emoji)
                   return (
                     <div className="order-item" key={it.id}>
                       <div className="order-item-image" aria-hidden="true">

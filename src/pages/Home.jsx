@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { FaLeaf, FaLocationDot, FaShieldHalved, FaWandMagicSparkles } from 'react-icons/fa6'
 import { products, formatVND } from '../data/products.js'
-import { defaultProductIcon, productIconMap } from '../data/productIcons.jsx'
+import { getProductIcon } from '../data/productIcons.jsx'
 import { useCart } from '../context/CartContext.jsx'
 
 const brandFeatures = [
@@ -101,7 +101,7 @@ export default function Home() {
 
           <div className="product-grid">
             {products.map((p) => {
-              const ProductIcon = productIconMap[p.icon] || defaultProductIcon
+              const ProductIcon = getProductIcon(p.icon)
               return (
                 <article key={p.id} className="product-card">
                   <div className="product-image" aria-hidden="true">

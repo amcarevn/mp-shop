@@ -1,8 +1,8 @@
 import {
-  FaAppleWhole,
   FaBottleDroplet,
   FaBoxOpen,
   FaLeaf,
+  FaLemon,
   FaMugHot,
   FaSeedling,
   FaSprayCanSparkles,
@@ -13,8 +13,20 @@ export const productIconMap = {
   coffee: FaMugHot,
   beauty: FaSprayCanSparkles,
   seedling: FaSeedling,
-  citrus: FaAppleWhole,
+  citrus: FaLemon,
   leaf: FaLeaf,
 }
 
 export const defaultProductIcon = FaBoxOpen
+
+const legacyEmojiIconMap = {
+  '🧴': FaBottleDroplet,
+  '☕': FaMugHot,
+  '💄': FaSprayCanSparkles,
+  '🥥': FaSeedling,
+  '🍊': FaLemon,
+  '🌿': FaLeaf,
+}
+
+export const getProductIcon = (iconKey, legacyEmoji) =>
+  productIconMap[iconKey] || legacyEmojiIconMap[legacyEmoji] || defaultProductIcon
