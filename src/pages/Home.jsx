@@ -18,6 +18,12 @@ const collectionPanels = [
   { Icon: FaLeaf, key: 'lumiGlow', layout: 'panel-right' },
 ]
 
+const CATEGORY_ANCHOR_BY_PRODUCT_ID = {
+  ap1: 'products-acne',
+  sf1: 'products-dark-spots',
+  lg1: 'products-brightening',
+}
+
 export default function Home() {
   const { t, i18n } = useTranslation()
   const { addItem } = useCart()
