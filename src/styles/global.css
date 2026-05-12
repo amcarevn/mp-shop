@@ -514,6 +514,7 @@ button { font-family: inherit; cursor: pointer; }
 .collections-sub {
   max-width: 760px;
   margin: 0 auto 56px;
+  text-align: center;
 }
 
 .collections-grid {
