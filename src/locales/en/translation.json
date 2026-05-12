@@ -124,6 +124,26 @@
     "aboutTitle": "About ORIA",
     "aboutText": "ORIA is more than just a name — it represents the natural rhythm of the skin. From the belief that skin doesn't need to become something else but needs to return to its best self, ORIA was created as a space for recalibration. We combine proven dermatological actives with a deep understanding of skin behavior in hot, humid climates to create products that are safe, effective, and suitable for long-term use.",
     "aboutCta": "Learn more",
+    "collectionsTitle": "3 Core Product Collections",
+    "collectionsSubtitle": "Three focused systems with a cleaner structure, helping you pick the right routine quickly without visual clutter.",
+    "collectionsCta": "Explore this collection",
+    "collections": {
+      "spotFade": {
+        "kicker": "Dark Spots • Tone",
+        "title": "SPOT-FADE Collection",
+        "desc": "A targeted routine to fade dark spots, post-acne marks, and uneven tone using clinically trusted brightening actives."
+      },
+      "acnePure": {
+        "kicker": "Acne • Balance",
+        "title": "ACNE-PURE Collection",
+        "desc": "A complete acne-care line that deep-cleans, controls excess oil, and supports skin recovery in hot and humid conditions."
+      },
+      "lumiGlow": {
+        "kicker": "Radiance • Smoothness",
+        "title": "LUMI-GLOW Collection",
+        "desc": "A glow-focused set designed to improve clarity and softness with lightweight formulas that feel comfortable all day."
+      }
+    },
     "highlightBadge": "Best Seller",
     "highlightTitle": "SPOT-FADE Serum",
     "highlightDesc": "Intensive dark spot correcting serum powered by 5% Tranexamic Acid, 2% Alpha Arbutin, and 5% Niacinamide. Helps reduce dark spots, post-acne marks, and uneven skin tone.",

@@ -12,7 +12,11 @@ const brandFeatures = [
   { Icon: FaWandMagicSparkles, key: 'feature4' },
 ]
 
-const featuredProduct = products.find(p => p.id === 'sf3') || products[0]
+const collectionPanels = [
+  { Icon: FaWandMagicSparkles, key: 'spotFade', layout: 'panel-left' },
+  { Icon: FaShieldHalved, key: 'acnePure', layout: 'panel-center' },
+  { Icon: FaLeaf, key: 'lumiGlow', layout: 'panel-right' },
+]
 
 export default function Home() {
   const { t, i18n } = useTranslation()
@@ -63,33 +67,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== FEATURED PRODUCT HIGHLIGHT ===== */}
-      {featuredProduct && (
-      <section className="highlight-section">
-        <div className="container highlight-inner">
-          <div className="highlight-image-wrap">
-            <div className="product-image highlight-icon-placeholder" aria-hidden="true">
-              {(() => { const Icon = getProductIcon(featuredProduct.icon); return <Icon className="product-icon highlight-icon" /> })()}
-            </div>
-          </div>
-          <div className="highlight-text">
-            <span className="highlight-badge">{t('brand.highlightBadge')}</span>
-            <h2>{t('brand.highlightTitle')}</h2>
-            <p>{t('brand.highlightDesc')}</p>
-            <div className="highlight-price">{formatPrice(featuredProduct.price, i18n.resolvedLanguage)}</div>
-            <button
-              className="btn-primary"
-              onClick={() => {
-                handleAdd(featuredProduct)
-                navigate('/checkout')
-              }}
-            >
-              {t('brand.highlightCta')}
-            </button>
+      {/* ===== COLLECTION PANELS ===== */}
+      <section className="collections-section" aria-labelledby="collections-title">
+        <div className="container">
+          <h2 id="collections-title" className="section-title">{t('brand.collectionsTitle')}</h2>
+          <p className="section-sub collections-sub">{t('brand.collectionsSubtitle')}</p>
+          <div className="collections-grid">
+            {collectionPanels.map(({ Icon, key, layout }) => (
+              <article key={key} className={`collection-panel ${layout}`}>
+                <div className="collection-panel-icon-wrap" aria-hidden="true">
+                  <Icon className="collection-panel-icon" />
+                </div>
+                <div className="collection-panel-content">
+                  <p className="collection-panel-kicker">{t(`brand.collections.${key}.kicker`)}</p>
+                  <h3>{t(`brand.collections.${key}.title`)}</h3>
+                  <p>{t(`brand.collections.${key}.desc`)}</p>
+                  <a href="#products" className="collection-panel-link">{t('brand.collectionsCta')}</a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
-      )}
 
       {/* ===== PRODUCTS GRID ===== */}
       <section className="section" id="products">

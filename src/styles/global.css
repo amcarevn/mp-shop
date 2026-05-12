@@ -436,94 +436,133 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.5;
 }
 
-/* ========= Highlight / Featured Product ========= */
-.highlight-section {
+/* ========= Main Collections ========= */
+.collections-section {
   background: var(--color-cream-2);
-  padding: 72px 0;
+  padding: 88px 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
 
-.highlight-inner {
+.collections-sub {
+  max-width: 760px;
+  margin: 0 auto 56px;
+}
+
+.collections-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 36px;
+}
+
+.collection-panel {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) + 4px);
+  padding: 36px;
+  display: grid;
   align-items: center;
+  gap: 28px;
 }
 
-@media (max-width: 768px) {
-  .highlight-section {
-    padding: 48px 0;
-  }
-  .highlight-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .highlight-text h2 {
-    font-size: 24px;
-  }
+.collection-panel.panel-left,
+.collection-panel.panel-right {
+  grid-template-columns: minmax(160px, 220px) 1fr;
 }
 
-.highlight-image-wrap {
+.collection-panel.panel-center {
+  text-align: center;
+  justify-items: center;
+}
+
+.collection-panel.panel-right .collection-panel-icon-wrap {
+  order: 2;
+}
+
+.collection-panel.panel-right .collection-panel-content {
+  order: 1;
+}
+
+.collection-panel-icon-wrap {
+  width: clamp(112px, 16vw, 150px);
+  height: clamp(112px, 16vw, 150px);
+  border-radius: 50%;
+  background: var(--color-cream);
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.highlight-img {
-  max-width: 380px;
-  width: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 32px rgba(0,0,0,.12));
-  transition: transform .3s;
-}
-.highlight-img:hover { transform: scale(1.03); }
-
-.highlight-icon-placeholder {
-  width: 100%;
-  min-height: 220px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.highlight-icon {
-  font-size: 8rem;
+.collection-panel-icon {
+  width: clamp(38px, 5vw, 52px);
+  height: clamp(38px, 5vw, 52px);
+  color: var(--color-gold-dark);
 }
 
-.highlight-badge {
-  display: inline-block;
-  background: var(--color-gold);
-  color: #fff;
-  border-radius: 999px;
-  padding: 5px 16px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.highlight-text h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0 0 16px;
-  color: var(--color-text);
+.collection-panel-content h3 {
+  font-size: 26px;
+  margin: 0 0 14px;
   line-height: 1.25;
 }
 
-.highlight-text p {
-  font-size: 15px;
+.collection-panel-content p {
+  margin: 0;
   color: var(--color-muted);
   line-height: 1.7;
-  margin: 0 0 20px;
 }
 
-.highlight-price {
-  font-size: 24px;
-  font-weight: 700;
+.collection-panel-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--color-cream);
   color: var(--color-gold-dark);
-  margin-bottom: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.collection-panel-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--color-gold-dark);
+}
+
+.collection-panel-link:hover {
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .collections-section {
+    padding: 56px 0;
+  }
+  .collections-sub {
+    margin-bottom: 36px;
+  }
+  .collections-grid {
+    gap: 20px;
+  }
+  .collection-panel {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 24px;
+    gap: 18px;
+  }
+  .collection-panel.panel-right .collection-panel-icon-wrap,
+  .collection-panel.panel-right .collection-panel-content {
+    order: unset;
+  }
+  .collection-panel.panel-center {
+    justify-items: start;
+    text-align: left;
+  }
+  .collection-panel-content h3 {
+    font-size: 22px;
+  }
 }
 
 /* ========= Section / Products ========= */
