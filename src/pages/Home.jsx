@@ -107,7 +107,7 @@ export default function Home() {
               const ProductIcon = getProductIcon(p.icon)
               const cardAnchorId = productCategoryAnchors[p.id]
               return (
-                <article key={p.id} {...(cardAnchorId ? { id: cardAnchorId } : {})} className="product-card">
+                <article key={p.id} {...(cardAnchorId && { id: cardAnchorId })} className="product-card">
                   <div className="product-image" aria-hidden="true">
                     <ProductIcon className="product-icon" />
                   </div>
