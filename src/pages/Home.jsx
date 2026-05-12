@@ -13,12 +13,6 @@ const brandFeatures = [
 ]
 
 const featuredProduct = products.find(p => p.id === 'sf3') || products[0]
-const productCategoryAnchors = {
-  ap1: 'products-acne',
-  sf1: 'products-dark-spots',
-  lg1: 'products-brightening',
-}
-
 export default function Home() {
   const { t, i18n } = useTranslation()
   const { addItem } = useCart()
@@ -105,9 +99,15 @@ export default function Home() {
           <div className="product-grid">
             {products.map((p) => {
               const ProductIcon = getProductIcon(p.icon)
-              const cardAnchorId = productCategoryAnchors[p.id]
+              const anchorId = p.id === 'ap1'
+                ? 'products-acne'
+                : p.id === 'sf1'
+                  ? 'products-dark-spots'
+                  : p.id === 'lg1'
+                    ? 'products-brightening'
+                    : undefined
               return (
-                <article key={p.id} {...(cardAnchorId && { id: cardAnchorId })} className="product-card">
+                <article key={p.id} id={anchorId} className="product-card">
                   <div className="product-image" aria-hidden="true">
                     <ProductIcon className="product-icon" />
                   </div>
