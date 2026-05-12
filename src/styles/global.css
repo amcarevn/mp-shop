@@ -138,7 +138,7 @@ button { font-family: inherit; cursor: pointer; }
   top: calc(100% + 10px);
   left: 0;
   min-width: 220px;
-  background: #fff;
+  background: var(--color-cream-2);
   border: 1px solid var(--color-border);
   border-radius: 10px;
   box-shadow: 0 8px 18px rgba(0,0,0,.08);
