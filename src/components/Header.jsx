@@ -29,7 +29,14 @@ export default function Header() {
 
         <nav className="nav">
           <NavLink to="/" end>{t('nav.home')}</NavLink>
-          <a href="#products">{t('nav.shop')}</a>
+          <details className="nav-dropdown">
+            <summary>{t('nav.product')}</summary>
+            <div className="nav-dropdown-menu">
+              <a href="#products-acne">{t('nav.productAcne')}</a>
+              <a href="#products-dark-spots">{t('nav.productDarkSpots')}</a>
+              <a href="#products-brightening">{t('nav.productBrightening')}</a>
+            </div>
+          </details>
           <a href="#about">{t('nav.about')}</a>
           <a href="#contact">{t('nav.contact')}</a>
         </nav>
@@ -98,7 +105,14 @@ export default function Header() {
 
             <div className="mobile-nav-links">
               <NavLink to="/" end onClick={closeMenu}>{t('nav.home')}</NavLink>
-              <a href="#products" onClick={closeMenu}>{t('nav.shop')}</a>
+              <details className="mobile-nav-dropdown">
+                <summary>{t('nav.product')}</summary>
+                <div className="mobile-sub-links">
+                  <a href="#products-acne" onClick={closeMenu}>{t('nav.productAcne')}</a>
+                  <a href="#products-dark-spots" onClick={closeMenu}>{t('nav.productDarkSpots')}</a>
+                  <a href="#products-brightening" onClick={closeMenu}>{t('nav.productBrightening')}</a>
+                </div>
+              </details>
               <a href="#about" onClick={closeMenu}>{t('nav.about')}</a>
               <a href="#contact" onClick={closeMenu}>{t('nav.contact')}</a>
             </div>
