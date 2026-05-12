@@ -13,6 +13,11 @@ const brandFeatures = [
 ]
 
 const featuredProduct = products.find(p => p.id === 'sf3') || products[0]
+const productCategoryAnchors = {
+  ap1: 'products-acne',
+  sf1: 'products-dark-spots',
+  lg1: 'products-brightening',
+}
 
 export default function Home() {
   const { t, i18n } = useTranslation()
@@ -101,7 +106,7 @@ export default function Home() {
             {products.map((p) => {
               const ProductIcon = getProductIcon(p.icon)
               return (
-                <article key={p.id} className="product-card">
+                <article key={p.id} id={productCategoryAnchors[p.id]} className="product-card">
                   <div className="product-image" aria-hidden="true">
                     <ProductIcon className="product-icon" />
                   </div>
