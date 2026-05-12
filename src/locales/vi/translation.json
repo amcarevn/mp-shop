@@ -127,6 +127,26 @@
     "aboutTitle": "Về ORIA",
     "aboutText": "ORIA không chỉ là một cái tên — đó là nhịp điệu tự nhiên của làn da. Từ niềm tin rằng da không cần trở thành thứ gì khác mà cần trở về phiên bản tốt nhất của chính nó, ORIA ra đời như một không gian để tái cân bằng. Chúng tôi kết hợp hoạt chất da liễu đã được kiểm chứng với hiểu biết sâu sắc về hành vi của da trong khí hậu nóng ẩm để tạo ra sản phẩm an toàn, hiệu quả và phù hợp sử dụng lâu dài.",
     "aboutCta": "Tìm hiểu thêm",
+    "collectionsTitle": "3 Bộ Sản Phẩm Chủ Lực",
+    "collectionsSubtitle": "Ba hệ chăm sóc chuyên biệt với bố cục rõ ràng, giúp bạn chọn đúng giải pháp theo nhu cầu da mà không bị rối thông tin.",
+    "collectionsCta": "Khám phá bộ sản phẩm",
+    "collections": {
+      "spotFade": {
+        "kicker": "Giảm Nám • Đều Màu",
+        "title": "SPOT-FADE Collection",
+        "desc": "Bộ chăm sóc tập trung làm mờ nám, thâm mụn và cải thiện tông da không đều bằng tổ hợp hoạt chất làm sáng đã được kiểm chứng."
+      },
+      "acnePure": {
+        "kicker": "Giảm Mụn • Dịu Da",
+        "title": "ACNE-PURE Collection",
+        "desc": "Hệ sản phẩm làm sạch sâu, kiểm soát dầu và hỗ trợ phục hồi da mụn, phù hợp cho da đang dễ kích ứng trong khí hậu nóng ẩm."
+      },
+      "lumiGlow": {
+        "kicker": "Sáng Khoẻ • Rạng Rỡ",
+        "title": "LUMI-GLOW Collection",
+        "desc": "Routine dưỡng sáng toàn diện giúp tăng độ rạng rỡ và độ mịn của da với cấu trúc công thức nhẹ, thoáng và dễ dùng hằng ngày."
+      }
+    },
     "highlightBadge": "Bán Chạy Nhất",
     "highlightTitle": "SPOT-FADE Serum",
     "highlightDesc": "Serum chuyên trị nám chuyên sâu với 5% Tranexamic Acid, 2% Alpha Arbutin và 5% Niacinamide. Giúp giảm nám, thâm mụn và tông da không đều.",
