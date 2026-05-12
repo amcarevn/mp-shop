@@ -105,8 +105,9 @@ export default function Home() {
           <div className="product-grid">
             {products.map((p) => {
               const ProductIcon = getProductIcon(p.icon)
+              const anchorId = CATEGORY_ANCHOR_BY_PRODUCT_ID[p.id]
               return (
-                <article key={p.id} className="product-card">
+                <article key={p.id} id={anchorId} className="product-card">
                   <div className="product-image" aria-hidden="true">
                     <ProductIcon className="product-icon" />
                   </div>

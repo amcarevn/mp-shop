@@ -1,7 +1,10 @@
 {
   "nav": {
     "home": "Trang chủ",
-    "shop": "Sản phẩm",
+    "product": "Sản phẩm",
+    "productAcne": "Sản Phẩm Trị Mụn",
+    "productDarkSpots": "Sản Phẩm Trị Nám",
+    "productBrightening": "Sản Phẩm Làm Trắng",
     "about": "Về Thương Hiệu",
     "contact": "Liên hệ",
     "cart": "Giỏ hàng"
