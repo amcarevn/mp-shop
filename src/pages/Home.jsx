@@ -82,7 +82,13 @@ export default function Home() {
                   <p className="collection-panel-kicker">{t(`brand.collections.${key}.kicker`)}</p>
                   <h3>{t(`brand.collections.${key}.title`)}</h3>
                   <p>{t(`brand.collections.${key}.desc`)}</p>
-                  <a href="#products" className="collection-panel-link">{t('brand.collectionsCta')}</a>
+                  <a
+                    href="#products"
+                    className="collection-panel-link"
+                    aria-label={`${t('brand.collectionsCta')} - ${t(`brand.collections.${key}.title`)}`}
+                  >
+                    {t('brand.collectionsCta')}
+                  </a>
                 </div>
               </article>
             ))}
