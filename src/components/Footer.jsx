@@ -1,52 +1,60 @@
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa6'
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const dishes = useMemo(() => {
+    const foodOptions = i18n.getResource(i18n.language, 'translation', 'footer.foodOptions')
+    return Array.isArray(foodOptions) ? foodOptions : []
+  }, [i18n.language])
+  const [selectedDish, setSelectedDish] = useState('')
+
+  const pickRandomDish = useCallback((currentDish = '') => {
+    if (!dishes.length) return ''
+
+    const availableDishes = dishes.filter((dish) => dish !== currentDish)
+    const source = availableDishes.length ? availableDishes : dishes
+    return source[Math.floor(Math.random() * source.length)]
+  }, [dishes])
+
+  useEffect(() => {
+    setSelectedDish(pickRandomDish())
+  }, [pickRandomDish])
+
   return (
     <footer className="footer" id="contact">
-      <div className="container footer-grid">
-        <div className="footer-col">
-          <div className="footer-logo">
-            <span className="logo-name">ORIA</span>
-            <span className="logo-sub">SAFE SOLUTIONS FOR TROPICAL SKIN</span>
-          </div>
-          <p className="footer-tagline">{t('footer.col1Text')}</p>
+      <div className="container footer-picker">
+        <span className="footer-eyebrow">{t('footer.eyebrow')}</span>
+        <h2>{t('footer.title')}</h2>
+        <p className="footer-description">{t('footer.description')}</p>
+
+        <div className="footer-result" aria-live="polite">
+          <span className="footer-result-label">{t('footer.resultLabel')}</span>
+          <strong>{selectedDish || t('footer.fallback')}</strong>
         </div>
 
-        <div className="footer-col">
-          <h4>{t('footer.col2Title')}</h4>
-          <ul>
-            <li><a href="#products">{t('footer.col2Link1')}</a></li>
-            <li><a href="#products">{t('footer.col2Link2')}</a></li>
-            <li><a href="#products">{t('footer.col2Link3')}</a></li>
-            <li><a href="#products">{t('footer.col2Link4')}</a></li>
-          </ul>
-        </div>
+        <button
+          type="button"
+          className="btn-primary footer-button"
+          onClick={() => setSelectedDish((currentDish) => pickRandomDish(currentDish))}
+        >
+          {t('footer.button')}
+        </button>
 
-        <div className="footer-col">
-          <h4>{t('footer.col3Title')}</h4>
-          <ul>
-            <li><a href="#contact">{t('footer.col3Link1')}</a></li>
-            <li><a href="#contact">{t('footer.col3Link2')}</a></li>
-            <li><a href="#contact">{t('footer.col3Link3')}</a></li>
-            <li><a href="#contact">{t('footer.col3Link4')}</a></li>
-          </ul>
-        </div>
-
-        <div className="footer-col">
-          <h4>{t('footer.col4Title')}</h4>
-          <div className="footer-social">
-            <a href="#contact" className="social-link"><FaFacebookF className="inline-icon" /> {t('footer.social1')}</a>
-            <a href="#contact" className="social-link"><FaInstagram className="inline-icon" /> {t('footer.social2')}</a>
-            <a href="#contact" className="social-link"><FaTiktok className="inline-icon" /> {t('footer.social3')}</a>
-            <a href="#contact" className="social-link"><FaYoutube className="inline-icon" /> {t('footer.social4')}</a>
-          </div>
-        </div>
+        <ul className="footer-dishes">
+          {dishes.map((dish) => (
+            <li
+              key={dish}
+              className={dish === selectedDish ? 'is-selected' : ''}
+            >
+              {dish}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="footer-bottom">
-        <div className="container">{t('footer.copyright')}</div>
+        <div className="container">{t('footer.bottomText')}</div>
       </div>
     </footer>
   )

@@ -151,23 +151,24 @@
     "exchange": "Product exchange or refund is supported for manufacturing defects, shipping damage, or incorrect items. Contact ORIA within 48 hours of receiving the order."
   },
   "footer": {
-    "copyright": "© 2025 ORIA. All rights reserved.",
-    "col1Title": "ORIA",
-    "col1Text": "Safe Solutions for Tropical Skin.",
-    "col2Title": "Collections",
-    "col2Link1": "SPOT-FADE (Dark Spots)",
-    "col2Link2": "ACNE-PURE (Acne Care)",
-    "col2Link3": "LUMI-GLOW (Brightening)",
-    "col2Link4": "Complete Sets",
-    "col3Title": "Support",
-    "col3Link1": "Return & Exchange Policy",
-    "col3Link2": "Purchasing & Payment Policy",
-    "col3Link3": "Product Support Policy",
-    "col3Link4": "Contact",
-    "col4Title": "Follow us",
-    "social1": "Facebook",
-    "social2": "Instagram",
-    "social3": "TikTok",
-    "social4": "YouTube"
+    "bottomText": "A daily suggestion of 10 iconic Hanoi dishes.",
+    "eyebrow": "Today's meal picker",
+    "title": "Random Hanoi food selector",
+    "description": "Press the button to randomly pick 1 out of 10 popular Hanoi dishes for today.",
+    "resultLabel": "Today's selected dish",
+    "button": "Pick another dish",
+    "fallback": "Bún chả",
+    "foodOptions": [
+      "Phở bò",
+      "Bún chả",
+      "Bún thang",
+      "Bún đậu mắm tôm",
+      "Chả cá Lã Vọng",
+      "Bánh cuốn Thanh Trì",
+      "Bún ốc",
+      "Miến lươn",
+      "Xôi xéo",
+      "Cốm làng Vòng"
+    ]
   }
 }

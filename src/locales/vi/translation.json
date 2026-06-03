@@ -151,23 +151,24 @@
     "exchange": "Hỗ trợ đổi trả sản phẩm đối với lỗi nhà sản xuất, hư hỏng trong vận chuyển hoặc giao nhầm sản phẩm. Liên hệ ORIA trong vòng 48 giờ sau khi nhận hàng."
   },
   "footer": {
-    "copyright": "© 2025 ORIA. Bảo lưu mọi quyền.",
-    "col1Title": "ORIA",
-    "col1Text": "Giải pháp an toàn cho làn da nhiệt đới.",
-    "col2Title": "Bộ Sản Phẩm",
-    "col2Link1": "SPOT-FADE (Trị Nám)",
-    "col2Link2": "ACNE-PURE (Trị Mụn)",
-    "col2Link3": "LUMI-GLOW (Trắng Da)",
-    "col2Link4": "Combo Bộ Sản Phẩm",
-    "col3Title": "Hỗ Trợ",
-    "col3Link1": "Chính sách đổi trả",
-    "col3Link2": "Chính sách mua hàng & thanh toán",
-    "col3Link3": "Chính sách bảo hành sản phẩm",
-    "col3Link4": "Liên hệ",
-    "col4Title": "Theo dõi chúng tôi",
-    "social1": "Facebook",
-    "social2": "Instagram",
-    "social3": "TikTok",
-    "social4": "YouTube"
+    "bottomText": "Gợi ý 10 món ngon Hà Nội cho hôm nay.",
+    "eyebrow": "Cuối trang hôm nay ăn gì?",
+    "title": "Công cụ chọn ngẫu nhiên món ăn Hà Nội",
+    "description": "Bấm nút để chọn ngẫu nhiên 1 trong 10 món ăn phổ biến của Hà Nội cho bữa hôm nay.",
+    "resultLabel": "Món được chọn hôm nay",
+    "button": "Chọn món khác",
+    "fallback": "Bún chả",
+    "foodOptions": [
+      "Phở bò",
+      "Bún chả",
+      "Bún thang",
+      "Bún đậu mắm tôm",
+      "Chả cá Lã Vọng",
+      "Bánh cuốn Thanh Trì",
+      "Bún ốc",
+      "Miến lươn",
+      "Xôi xéo",
+      "Cốm làng Vòng"
+    ]
   }
 }
