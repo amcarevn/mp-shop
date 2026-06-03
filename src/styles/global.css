@@ -1,15 +1,16 @@
-/* The Cocoon-inspired theme */
+/* Ocean-inspired theme */
 :root {
-  --color-cream: #f6efe1;        /* page background */
-  --color-cream-2: #fbf6ea;      /* card background */
-  --color-gold: #d9a441;         /* logo / accent */
-  --color-gold-dark: #b8862a;
-  --color-text: #2b2b2b;
-  --color-muted: #8a7f6d;
-  --color-border: #e5dccb;
+  --color-cream: #eaf4ff;        /* page background */
+  --color-cream-2: #f5faff;      /* card background */
+  --color-gold: #1f7ed6;         /* logo / accent */
+  --color-gold-dark: #0e5aa7;
+  --color-text: #102942;
+  --color-muted: #5e7691;
+  --color-border: #c8ddf2;
   --color-red: #d64545;          /* qty selector + warnings */
-  --color-black: #111111;
+  --color-black: #08213d;
   --color-green: #3a7d44;
+  --color-bg-alt: #e1eefb;
   --radius: 14px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   --max-width: 1280px;
@@ -296,7 +297,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .mobile-nav-links a:hover, .mobile-nav-links a.active {
   color: var(--color-gold-dark);
-  background: #fbf3df;
+  background: #e3f0fc;
 }
 .mobile-nav-dropdown {
   border-bottom: 1px solid var(--color-border);
@@ -313,7 +314,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .mobile-nav-dropdown[open] summary {
   color: var(--color-gold-dark);
-  background: #fbf3df;
+  background: #e3f0fc;
 }
 .mobile-sub-links a {
   display: block;
@@ -382,7 +383,7 @@ button { font-family: inherit; cursor: pointer; }
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  filter: brightness(0.72);
+  filter: brightness(0.68) hue-rotate(190deg) saturate(1.15);
   z-index: 0;
 }
 
@@ -713,7 +714,7 @@ button { font-family: inherit; cursor: pointer; }
   background-image: url('/bg_brand_cf39014_2_9e67c4813e.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.55);
+  filter: brightness(0.52) hue-rotate(190deg) saturate(1.1);
   z-index: 0;
 }
 
@@ -847,7 +848,7 @@ button { font-family: inherit; cursor: pointer; }
   cursor: pointer;
 }
 .shipping-option input { accent-color: var(--color-gold); }
-.shipping-option.active { border-color: var(--color-gold); background: #fbf3df; }
+.shipping-option.active { border-color: var(--color-gold); background: #e3f0fc; }
 .shipping-option .price { margin-left: auto; font-weight: 600; }
 
 .payment-method {
@@ -861,7 +862,7 @@ button { font-family: inherit; cursor: pointer; }
   cursor: pointer;
 }
 .payment-method input { accent-color: var(--color-gold); }
-.payment-method.active { border-color: var(--color-gold); background: #fbf3df; }
+.payment-method.active { border-color: var(--color-gold); background: #e3f0fc; }
 .payment-method > span {
   display: inline-flex;
   align-items: center;
