@@ -1,30 +1,30 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-function getRandomDish(items, currentDish = '') {
-  if (!items.length) return ''
-  if (items.length === 1) return items[0]
-
-  let nextDish = currentDish
-
-  while (nextDish === currentDish) {
-    nextDish = items[Math.floor(Math.random() * items.length)]
-  }
-
-  return nextDish
-}
 
 export default function Footer() {
   const { t, i18n } = useTranslation()
   const dishes = useMemo(() => {
     const foodOptions = t('footer.foodOptions', { returnObjects: true })
     return Array.isArray(foodOptions) ? foodOptions : []
-  }, [i18n.language])
+  }, [i18n.language, t])
   const [selectedDish, setSelectedDish] = useState('')
 
-  useEffect(() => {
-    setSelectedDish(getRandomDish(dishes))
+  const pickRandomDish = useCallback((currentDish = '') => {
+    if (!dishes.length) return ''
+    if (dishes.length === 1) return dishes[0]
+
+    let nextDish = currentDish
+
+    while (nextDish === currentDish) {
+      nextDish = dishes[Math.floor(Math.random() * dishes.length)]
+    }
+
+    return nextDish
   }, [dishes])
+
+  useEffect(() => {
+    setSelectedDish(pickRandomDish())
+  }, [pickRandomDish])
 
   return (
     <footer className="footer" id="contact">
@@ -41,7 +41,7 @@ export default function Footer() {
         <button
           type="button"
           className="btn-primary footer-button"
-          onClick={() => setSelectedDish((currentDish) => getRandomDish(dishes, currentDish))}
+          onClick={() => setSelectedDish((currentDish) => pickRandomDish(currentDish))}
         >
           {t('footer.button')}
         </button>
@@ -59,7 +59,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div className="container">{t('footer.copyright')}</div>
+        <div className="container">{t('footer.bottomText')}</div>
       </div>
     </footer>
   )

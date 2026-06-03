@@ -151,7 +151,7 @@
     "exchange": "Product exchange or refund is supported for manufacturing defects, shipping damage, or incorrect items. Contact ORIA within 48 hours of receiving the order."
   },
   "footer": {
-    "copyright": "A daily suggestion of 10 iconic Hanoi dishes.",
+    "bottomText": "A daily suggestion of 10 iconic Hanoi dishes.",
     "eyebrow": "Today's meal picker",
     "title": "Random Hanoi food selector",
     "description": "Press the button to randomly pick 1 out of 10 popular Hanoi dishes for today.",
