@@ -4,22 +4,17 @@ import { useTranslation } from 'react-i18next'
 export default function Footer() {
   const { t, i18n } = useTranslation()
   const dishes = useMemo(() => {
-    const foodOptions = t('footer.foodOptions', { returnObjects: true })
+    const foodOptions = i18n.getResource(i18n.language, 'translation', 'footer.foodOptions')
     return Array.isArray(foodOptions) ? foodOptions : []
-  }, [i18n.language, t])
+  }, [i18n.language])
   const [selectedDish, setSelectedDish] = useState('')
 
   const pickRandomDish = useCallback((currentDish = '') => {
     if (!dishes.length) return ''
-    if (dishes.length === 1) return dishes[0]
 
-    let nextDish = currentDish
-
-    while (nextDish === currentDish) {
-      nextDish = dishes[Math.floor(Math.random() * dishes.length)]
-    }
-
-    return nextDish
+    const availableDishes = dishes.filter((dish) => dish !== currentDish)
+    const source = availableDishes.length ? availableDishes : dishes
+    return source[Math.floor(Math.random() * source.length)]
   }, [dishes])
 
   useEffect(() => {
